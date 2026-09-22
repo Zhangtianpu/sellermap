@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | SellerMap</title>
+  <meta name="description" content="SellerMap privacy policy covering website data, cookies, local storage, third-party advertising and future Google AdSense integration.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0f6bff">
+  <link rel="canonical" href="https://sellermap.top/en/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://sellermap.top/en/privacy.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://sellermap.top/cn/privacy.html">
+  <script>
+    (() => {
+      const key = "sellermap-theme";
+      try {
+        const saved = localStorage.getItem(key);
+        document.documentElement.dataset.theme = saved === "dark" || saved === "light"
+          ? saved
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+  <link rel="shortcut icon" href="../assets/images/sellermap.svg">
+  <link rel="stylesheet" href="../assets/css/seller.css">
+  <script defer src="../assets/js/theme.js"></script>
+  <script defer src="../assets/js/adsense.js" data-config="../data/site-config.json" data-adsense-loader></script>
+</head>
+<body class="static-page" data-lang="en">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Back to SellerMap">
+      <span class="brand-mark">S</span>
+      <span class="brand-copy"><strong class="brand-name">SellerMap</strong><span class="brand-note">Cross-border nav</span></span>
+    </a>
+    <div class="topbar-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" data-theme-dark-label="Dark" data-theme-light-label="Light" aria-label="Switch to dark background">
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.1A8.5 8.5 0 0 1 8.9 3.6 8.7 8.7 0 1 0 20.4 15Z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="theme-toggle-label">Dark</span>
+      </button>
+      <a class="language-switch" href="../cn/privacy.html" lang="zh-CN">中文</a>
+    </div>
+  </header>
+
+  <main class="static-main">
+    <section class="static-hero">
+      <span class="static-kicker">Privacy Policy</span>
+      <h1>How we protect and use data</h1>
+      <p>Last updated: September 22, 2026. This policy applies to the SellerMap cross-border ecommerce navigation website.</p>
+    </section>
+
+    <div class="privacy-layout">
+      <article class="prose">
+        <h2>1. Scope</h2>
+        <p>SellerMap is a directory that helps users discover cross-border ecommerce websites and tools. This policy explains the information that may be processed when you visit the site and how that information is used.</p>
+
+        <h2>2. Information we may process</h2>
+        <p>The site does not require an account or ask you to submit personal information. Our hosting provider may record standard access logs such as IP address, browser type, pages visited, referring URL and timestamps for security, reliability and troubleshooting.</p>
+        <p>The site uses browser local storage to remember your light or dark theme preference. This setting remains in your browser and is not actively uploaded to SellerMap.</p>
+
+        <h2>3. Google AdSense and third-party advertising</h2>
+        <p>We may add Google AdSense or other advertising services in the future. When enabled, Google and its partners may use cookies or similar technologies to serve and measure advertising based on visits to this and other websites.</p>
+        <p>You can manage personalized advertising through <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">Google Ads Settings</a> and review <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">How Google uses advertising data</a>.</p>
+
+        <h2>4. Cookies and analytics</h2>
+        <p>The current SellerMap code does not load third-party advertising scripts and does not use Google Analytics or another analytics platform. If analytics, advertising or consent-management tools are enabled later, this page will be updated and any legally required choices or consent mechanisms will be provided.</p>
+
+        <h2>5. Third-party links</h2>
+        <p>SellerMap links to many third-party services. Once you visit another website, its privacy policy, cookies and data practices apply. SellerMap does not control those third-party services.</p>
+
+        <h2>6. Information sharing</h2>
+        <p>SellerMap does not sell personal information. Trusted service providers may process limited data where necessary for hosting, security or advertising under their applicable terms.</p>
+
+        <h2>7. Security and retention</h2>
+        <p>We use reasonable measures to protect the website and its services, but no internet transmission is completely secure. Access-log retention depends on the hosting provider and legitimate security or legal requirements.</p>
+
+        <h2>8. Children's privacy</h2>
+        <p>SellerMap is intended for cross-border ecommerce professionals. It is not directed to children and does not knowingly collect personal information from children.</p>
+
+        <h2>9. Policy updates</h2>
+        <p>We may update this policy when website features, advertising services or legal requirements change. The latest revision date will be shown on this page.</p>
+
+        <h2>10. Contact us</h2>
+        <p>If you have questions about this privacy policy, email <a href="mailto:sellermap.service@gmail.com">sellermap.service@gmail.com</a>.</p>
+      </article>
+
+      <aside class="privacy-sidebar">
+        <div class="static-card">
+          <strong>Privacy contact</strong>
+          <p>Questions about cookies, advertising or data handling? Send us an email.</p>
+          <a class="email-link" href="mailto:sellermap.service@gmail.com">Contact SellerMap</a>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <strong>SellerMap</strong> · 2026
+      <div class="footer-links"><a href="index.html">Home</a><span>·</span><a href="contact.html">Contact</a></div>
+    </footer>
+  </main>
+</body>
+</html>

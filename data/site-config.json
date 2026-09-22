@@ -1,0 +1,9 @@
+{
+  "siteUrl": "https://sellermap.top",
+  "contactEmail": "sellermap.service@gmail.com",
+  "adsense": {
+    "enabled": false,
+    "clientId": "",
+    "autoAds": true
+  }
+}

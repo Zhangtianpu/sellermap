@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /README.md
+Disallow: /server.mjs
+Disallow: /package.json
+Disallow: /data/site-config.json
+
+Sitemap: https://sellermap.top/sitemap.xml

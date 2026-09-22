@@ -3,13 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SellerMap - The Cross-Border Seller Navigation Hub</title>
-  <meta name="description" content="SellerMap brings together marketplaces, store builders, product research, advertising, logistics, payments, ERP and compliance tools for cross-border sellers.">
+  <title>SellerMap | Cross-Border Ecommerce Tools &amp; Seller Resources</title>
+  <meta name="description" content="Discover curated marketplaces, DTC platforms, product research, advertising, logistics, payments, ERP and compliance tools for cross-border ecommerce sellers.">
   <meta name="keywords" content="cross-border ecommerce directory, Amazon seller tools, DTC tools, product research, ecommerce logistics, payments, ERP">
   <meta name="author" content="SellerMap">
-  <meta property="og:title" content="SellerMap">
-  <meta property="og:description" content="The essential navigation hub for cross-border sellers.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#0f6bff">
+  <link rel="canonical" href="https://sellermap.top/en/">
+  <link rel="alternate" hreflang="en" href="https://sellermap.top/en/">
+  <link rel="alternate" hreflang="zh-CN" href="https://sellermap.top/cn/">
+  <link rel="alternate" hreflang="x-default" href="https://sellermap.top/en/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SellerMap">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:title" content="SellerMap | Cross-Border Ecommerce Navigation">
+  <meta property="og:description" content="One launchpad for marketplaces, research, logistics, payments, growth and operations.">
+  <meta property="og:url" content="https://sellermap.top/en/">
+  <meta property="og:image" content="https://sellermap.top/assets/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SellerMap navigation for cross-border ecommerce sellers">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SellerMap | Cross-Border Ecommerce Navigation">
+  <meta name="twitter:description" content="Marketplaces, DTC tools, logistics, payments, ERP and growth resources.">
+  <meta name="twitter:image" content="https://sellermap.top/assets/images/og-cover.png">
   <script>
     (() => {
       const key = "sellermap-theme";
@@ -24,9 +42,45 @@
       }
     })();
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "SellerMap",
+          "alternateName": "SellerMap Cross-Border Navigation",
+          "url": "https://sellermap.top/",
+          "description": "A curated directory of marketplaces, tools, logistics, payments and operations resources for cross-border sellers.",
+          "inLanguage": "en",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://sellermap.top/en/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "name": "SellerMap",
+          "url": "https://sellermap.top/",
+          "email": "sellermap.service@gmail.com",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "sellermap.service@gmail.com"
+          }
+        }
+      ]
+    }
+  </script>
   <link rel="shortcut icon" href="../assets/images/sellermap.svg">
   <link rel="stylesheet" href="../assets/css/seller.css">
+  <script defer src="../assets/js/theme.js"></script>
   <script defer src="../assets/js/seller.js"></script>
+  <script defer src="../assets/js/adsense.js" data-config="../data/site-config.json" data-adsense-loader></script>
 </head>
 <body data-lang="en" data-data-url="../data/sites.json">
   <header class="topbar">
@@ -42,7 +96,7 @@
     </a>
     <div class="topbar-actions">
       <span class="status-pill">Curated &amp; updated</span>
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark background" title="Switch to dark background">
+      <button class="theme-toggle" id="theme-toggle" type="button" data-theme-dark-label="Dark" data-theme-light-label="Light" aria-label="Switch to dark background" title="Switch to dark background">
         <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.1A8.5 8.5 0 0 1 8.9 3.6 8.7 8.7 0 1 0 20.4 15Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         <span class="theme-toggle-label">Dark</span>
@@ -116,6 +170,11 @@
       <footer class="footer">
         <strong>SellerMap</strong> · Curated for cross-border sellers · <span id="year">2026</span><br>
         Listings are provided for discovery. Always verify current details on the provider's official website.
+        <div class="footer-links">
+          <a href="contact.html">Contact</a>
+          <span>·</span>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
       </footer>
     </main>
   </div>

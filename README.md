@@ -51,13 +51,50 @@ python3 -m http.server 4173 --bind 127.0.0.1
 
 可用主题包括 `ocean`、`violet` 和 `forest`。正式上线前请将示例产品和链接替换为自己的推广内容。
 
+## SEO 与域名
+
+首页已经包含 title、description、robots、canonical、hreflang、Open Graph、Twitter Card 和结构化数据。由于正式域名尚未确定，当前没有提交包含占位域名的 `sitemap.xml`。
+
+配置正式域名后运行：
+
+```bash
+SITE_URL=https://your-domain.com npm run seo
+```
+
+该命令会生成 `sitemap.xml`，并把 sitemap 地址写入 `robots.txt`。
+
+## Google AdSense
+
+AdSense 预留配置位于 `data/site-config.json`。当前 `enabled` 为 `false`，页面不会加载任何 Google 广告脚本。
+
+获得 AdSense 账号后：
+
+1. 将 `adsense.enabled` 改为 `true`
+2. 将 `adsense.clientId` 改为 `ca-pub-xxxxxxxxxxxxxxxx`
+3. 确认隐私政策中的广告说明准确反映实际使用的服务
+4. 在网站根目录添加 AdSense 提供的 `ads.txt`
+
+## 联系方式
+
+公开服务邮箱：`sellermap.service@gmail.com`。
+
+- 中文联系页：`cn/contact.html`
+- 英文联系页：`en/contact.html`
+- 中文隐私政策：`cn/privacy.html`
+- 英文隐私政策：`en/privacy.html`
+
 ## 项目结构
 
-- `cn/index.html`：中文页面
-- `en/index.html`：英文页面
-- `data/sites.json`：导航数据
+- `cn/index.html`、`en/index.html`：中英文首页
+- `cn/contact.html`、`en/contact.html`：联系页面
+- `cn/privacy.html`、`en/privacy.html`：隐私政策
+- `data/sites.json`：分类、网站和 Banner 数据
+- `data/site-config.json`：站点域名和 AdSense 配置
 - `assets/css/seller.css`：页面样式
 - `assets/js/seller.js`：分类、卡片、搜索和移动端交互
+- `assets/js/theme.js`：黑白主题
+- `assets/js/adsense.js`：按配置加载 AdSense
+- `scripts/generate-sitemap.mjs`：站点地图生成工具
 - `server.mjs`：零依赖本地静态服务器
 
 ## License

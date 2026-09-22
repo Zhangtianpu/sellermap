@@ -15,9 +15,7 @@
       emptyTitle: "没有找到匹配的网站",
       emptyText: "换一个关键词试试，例如“Amazon”“物流”或“支付”。",
       failedTitle: "数据加载失败",
-      failedText: "请通过本地服务器打开页面，不要直接双击 HTML 文件。",
-      themeDark: "黑色",
-      themeLight: "白色"
+      failedText: "请通过本地服务器打开页面，不要直接双击 HTML 文件。"
     },
     en: {
       allCategories: "All categories",
@@ -29,9 +27,7 @@
       emptyTitle: "No matching websites",
       emptyText: "Try another keyword such as “Amazon”, “logistics” or “payments”.",
       failedTitle: "Unable to load data",
-      failedText: "Open the site through a local server instead of loading the HTML file directly.",
-      themeDark: "Dark",
-      themeLight: "Light"
+      failedText: "Open the site through a local server instead of loading the HTML file directly."
     }
   }[lang];
 
@@ -42,52 +38,6 @@
     bannerIndex: 0,
     bannerTimer: null,
     bannerPaused: false
-  };
-
-  const themeStorageKey = "sellermap-theme";
-
-  const applyTheme = (theme) => {
-    const normalizedTheme = theme === "dark" ? "dark" : "light";
-    const button = document.querySelector("#theme-toggle");
-    const label = button?.querySelector(".theme-toggle-label");
-    const nextTheme = normalizedTheme === "dark" ? "light" : "dark";
-    const nextLabel = nextTheme === "dark" ? copy.themeDark : copy.themeLight;
-
-    document.documentElement.dataset.theme = normalizedTheme;
-
-    if (button) {
-      button.setAttribute("aria-pressed", String(normalizedTheme === "dark"));
-      button.setAttribute("aria-label", lang === "zh" ? `切换为${nextLabel}背景` : `Switch to ${nextLabel.toLowerCase()} background`);
-      button.title = button.getAttribute("aria-label");
-    }
-
-    if (label) {
-      label.textContent = nextLabel;
-    }
-  };
-
-  const initTheme = () => {
-    const button = document.querySelector("#theme-toggle");
-    const initialTheme = document.documentElement.dataset.theme
-      || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-
-    applyTheme(initialTheme);
-
-    button?.addEventListener("click", () => {
-      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-      applyTheme(nextTheme);
-      try {
-        window.localStorage.setItem(themeStorageKey, nextTheme);
-      } catch {
-        // Theme still works for the current page when storage is unavailable.
-      }
-    });
-
-    window.addEventListener("storage", (event) => {
-      if (event.key === themeStorageKey && (event.newValue === "dark" || event.newValue === "light")) {
-        applyTheme(event.newValue);
-      }
-    });
   };
 
   const escapeHtml = (value) => String(value)
@@ -391,6 +341,13 @@
       applyFilter();
     });
 
+    const initialQuery = new URLSearchParams(window.location.search).get("q") || "";
+    if (initialQuery) {
+      input.value = initialQuery;
+      state.query = initialQuery;
+      applyFilter();
+    }
+
     input.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         input.value = "";
@@ -469,8 +426,6 @@
   };
 
   const init = async () => {
-    initTheme();
-
     try {
       const response = await fetch(dataUrl);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
