@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SellerMap - 跨境导航</title>
+  <meta name="description" content="SellerMap 跨境电商导航。">
+  <script>
+    (() => {
+      const language = (navigator.language || "zh-CN").toLowerCase();
+      const target = language.startsWith("zh") ? "cn/index.html" : "en/index.html";
+      window.location.replace(target);
+    })();
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=cn/index.html"></noscript>
+  <link rel="shortcut icon" href="assets/images/sellermap.svg">
+</head>
+<body>
+  <p>正在进入 <a href="cn/index.html">SellerMap 跨境导航</a>…</p>
+</body>
+</html>

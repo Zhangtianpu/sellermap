@@ -1,0 +1,208 @@
+{
+  "brand": {
+    "name": "SellerMap",
+    "nameZh": "跨境导航",
+    "tagline": {
+      "zh": "跨境电商人的一站式工作导航",
+      "en": "The essential navigation hub for cross-border sellers"
+    },
+    "intro": {
+      "zh": "聚合平台、选品、建站、营销、物流、支付与运营工具，帮助你更快找到每天需要的服务。",
+      "en": "A curated launchpad for marketplaces, product research, store building, marketing, logistics, payments and operations."
+    }
+  },
+  "banners": [
+    {
+      "id": "helium10",
+      "theme": "ocean",
+      "icon": "H10",
+      "label": { "zh": "推广 · Amazon 工具", "en": "Sponsored · Amazon tools" },
+      "title": { "zh": "把选品和广告决策放在一个工具箱里", "en": "Turn product and ad research into one workflow" },
+      "description": { "zh": "从关键词、竞品到广告优化，用 Helium 10 集中管理 Amazon 增长流程。", "en": "Use Helium 10 to connect keyword, competitor and advertising intelligence for Amazon growth." },
+      "cta": { "zh": "了解 Helium 10", "en": "Explore Helium 10" },
+      "url": "https://www.helium10.com"
+    },
+    {
+      "id": "klaviyo",
+      "theme": "violet",
+      "icon": "K",
+      "label": { "zh": "推广 · 独立站增长", "en": "Sponsored · DTC growth" },
+      "title": { "zh": "把一次性访客变成长期复购客户", "en": "Turn one-time visitors into repeat customers" },
+      "description": { "zh": "通过 Klaviyo 的邮件与短信自动化，提升独立站转化、复购和客户终身价值。", "en": "Use Klaviyo email and SMS automation to improve conversion, retention and customer lifetime value." },
+      "cta": { "zh": "了解 Klaviyo", "en": "Explore Klaviyo" },
+      "url": "https://www.klaviyo.com"
+    },
+    {
+      "id": "17track",
+      "theme": "forest",
+      "icon": "17",
+      "label": { "zh": "推广 · 物流服务", "en": "Sponsored · Logistics" },
+      "title": { "zh": "让全球包裹状态清晰可见", "en": "Make every global shipment easier to track" },
+      "description": { "zh": "17TRACK 支持多承运商查询和物流 API，帮助客服与运营减少重复沟通。", "en": "17TRACK combines multi-carrier tracking and logistics APIs to reduce support and operations friction." },
+      "cta": { "zh": "了解 17TRACK", "en": "Explore 17TRACK" },
+      "url": "https://www.17track.net"
+    }
+  ],
+  "categories": [
+    {
+      "id": "marketplaces",
+      "icon": "🛒",
+      "name": { "zh": "平台与开店", "en": "Marketplaces" },
+      "description": { "zh": "全球主流电商平台的卖家入口与开店中心。", "en": "Seller centers and onboarding portals for global marketplaces." },
+      "sites": [
+        { "name": { "zh": "Amazon 全球开店", "en": "Amazon Global Selling" }, "url": "https://sell.amazon.com", "description": { "zh": "Amazon 官方卖家入驻、运营与增长资源。", "en": "Amazon's official onboarding, selling and growth hub." }, "tags": { "zh": ["平台", "Amazon"], "en": ["Marketplace", "Amazon"] }, "featured": true },
+        { "name": { "zh": "Amazon 卖家中心", "en": "Amazon Seller Central" }, "url": "https://sellercentral.amazon.com", "description": { "zh": "管理商品、订单、广告和店铺绩效。", "en": "Manage listings, orders, advertising and account health." }, "tags": { "zh": ["后台", "Amazon"], "en": ["Seller Center", "Amazon"] }, "featured": true },
+        { "name": { "zh": "TikTok Shop 卖家中心", "en": "TikTok Shop Seller Center" }, "url": "https://seller.tiktok.com", "description": { "zh": "TikTok Shop 商品、直播、达人及订单管理。", "en": "Manage products, live commerce, creators and orders on TikTok Shop." }, "tags": { "zh": ["内容电商", "TikTok"], "en": ["Social Commerce", "TikTok"] }, "featured": true },
+        { "name": { "zh": "Shopee 卖家中心", "en": "Shopee Seller Centre" }, "url": "https://seller.shopee.com", "description": { "zh": "东南亚及拉美市场的 Shopee 卖家后台。", "en": "Seller operations for Shopee across Southeast Asia and Latin America." }, "tags": { "zh": ["东南亚", "平台"], "en": ["Southeast Asia", "Marketplace"] } },
+        { "name": { "zh": "Temu 卖家中心", "en": "Temu Seller Center" }, "url": "https://seller.temu.com", "description": { "zh": "Temu 商家入驻、选品与订单管理入口。", "en": "Onboarding, product selection and order management for Temu sellers." }, "tags": { "zh": ["平台", "Temu"], "en": ["Marketplace", "Temu"] } },
+        { "name": { "zh": "eBay 卖家中心", "en": "eBay Seller Center" }, "url": "https://www.ebay.com/sl/sell", "description": { "zh": "面向全球买家的 eBay 开店与运营平台。", "en": "Launch and manage an eBay business for global buyers." }, "tags": { "zh": ["平台", "eBay"], "en": ["Marketplace", "eBay"] } },
+        { "name": { "zh": "Walmart Marketplace", "en": "Walmart Marketplace" }, "url": "https://marketplace.walmart.com", "description": { "zh": "申请入驻 Walmart，触达美国消费市场。", "en": "Apply to sell on Walmart and reach US shoppers." }, "tags": { "zh": ["北美", "Walmart"], "en": ["North America", "Walmart"] } },
+        { "name": { "zh": "Etsy Seller", "en": "Etsy Seller" }, "url": "https://www.etsy.com/sell", "description": { "zh": "面向手作、设计与特色商品的全球市场。", "en": "A global marketplace for handmade, design-led and specialty goods." }, "tags": { "zh": ["创意商品", "Etsy"], "en": ["Creative Goods", "Etsy"] } }
+      ]
+    },
+    {
+      "id": "store-builders",
+      "icon": "🏪",
+      "name": { "zh": "独立站建站", "en": "Store Builders" },
+      "description": { "zh": "搭建、运营和扩展品牌独立站的常用平台。", "en": "Platforms for launching and scaling branded DTC storefronts." },
+      "sites": [
+        { "name": { "zh": "Shopify", "en": "Shopify" }, "url": "https://www.shopify.com", "description": { "zh": "成熟的全球独立站与全渠道电商平台。", "en": "A mature global commerce platform for DTC and omnichannel retail." }, "tags": { "zh": ["独立站", "DTC"], "en": ["DTC", "Store Builder"] }, "featured": true },
+        { "name": { "zh": "WooCommerce", "en": "WooCommerce" }, "url": "https://woocommerce.com", "description": { "zh": "基于 WordPress 的开源电商解决方案。", "en": "Open-source ecommerce built on WordPress." }, "tags": { "zh": ["开源", "WordPress"], "en": ["Open Source", "WordPress"] } },
+        { "name": { "zh": "BigCommerce", "en": "BigCommerce" }, "url": "https://www.bigcommerce.com", "description": { "zh": "适合成长型品牌的 SaaS 独立站平台。", "en": "A SaaS commerce platform for growing brands." }, "tags": { "zh": ["独立站", "SaaS"], "en": ["DTC", "SaaS"] } },
+        { "name": { "zh": "Wix eCommerce", "en": "Wix eCommerce" }, "url": "https://www.wix.com/ecommerce/website", "description": { "zh": "低门槛建站与在线销售工具。", "en": "Accessible website building and online selling tools." }, "tags": { "zh": ["低代码", "建站"], "en": ["No-code", "Website"] } },
+        { "name": { "zh": "Squarespace Commerce", "en": "Squarespace Commerce" }, "url": "https://www.squarespace.com/ecommerce-website", "description": { "zh": "兼顾设计表现与电商功能的一体化建站工具。", "en": "All-in-one design and commerce website builder." }, "tags": { "zh": ["设计", "建站"], "en": ["Design", "Commerce"] } },
+        { "name": { "zh": "SHOPLINE", "en": "SHOPLINE" }, "url": "https://www.shopline.com", "description": { "zh": "面向全球商家的智慧零售与独立站平台。", "en": "Smart retail and DTC infrastructure for global merchants." }, "tags": { "zh": ["独立站", "全球"], "en": ["DTC", "Global"] } },
+        { "name": { "zh": "Ueeshop", "en": "Ueeshop" }, "url": "https://www.ueeshop.com", "description": { "zh": "面向外贸企业的独立站建站服务。", "en": "Cross-border storefront solutions for export businesses." }, "tags": { "zh": ["外贸", "建站"], "en": ["Export", "Store Builder"] } },
+        { "name": { "zh": "XShoppy", "en": "XShoppy" }, "url": "https://www.xshoppy.com", "description": { "zh": "服务跨境卖家的独立站与运营平台。", "en": "DTC and operations platform for cross-border sellers." }, "tags": { "zh": ["独立站", "运营"], "en": ["DTC", "Operations"] } }
+      ]
+    },
+    {
+      "id": "product-research",
+      "icon": "🔍",
+      "name": { "zh": "选品与市场洞察", "en": "Product Research" },
+      "description": { "zh": "发现趋势、分析需求并评估竞争机会。", "en": "Spot trends, validate demand and assess competitive opportunities." },
+      "sites": [
+        { "name": { "zh": "Google Trends", "en": "Google Trends" }, "url": "https://trends.google.com", "description": { "zh": "查看全球及分地区搜索趋势变化。", "en": "Explore search demand trends by market and period." }, "tags": { "zh": ["趋势", "免费"], "en": ["Trends", "Free"] }, "featured": true },
+        { "name": { "zh": "Jungle Scout", "en": "Jungle Scout" }, "url": "https://www.junglescout.com", "description": { "zh": "Amazon 选品、销量估算与竞品分析。", "en": "Amazon product discovery, sales estimates and competitor research." }, "tags": { "zh": ["Amazon", "选品"], "en": ["Amazon", "Research"] }, "featured": true },
+        { "name": { "zh": "Helium 10", "en": "Helium 10" }, "url": "https://www.helium10.com", "description": { "zh": "覆盖关键词、选品、广告与店铺分析的亚马逊工具。", "en": "Amazon software for keywords, products, ads and account analytics." }, "tags": { "zh": ["Amazon", "工具"], "en": ["Amazon", "Toolkit"] }, "featured": true },
+        { "name": { "zh": "Keepa", "en": "Keepa" }, "url": "https://keepa.com", "description": { "zh": "跟踪 Amazon 价格、排名和库存历史。", "en": "Track Amazon price, rank and availability history." }, "tags": { "zh": ["价格", "Amazon"], "en": ["Pricing", "Amazon"] } },
+        { "name": { "zh": "卖家精灵", "en": "SellerSprite" }, "url": "https://www.sellersprite.com", "description": { "zh": "亚马逊关键词、选品与市场分析工具。", "en": "Amazon keyword, product and market intelligence." }, "tags": { "zh": ["Amazon", "数据"], "en": ["Amazon", "Analytics"] } },
+        { "name": { "zh": "Similarweb", "en": "Similarweb" }, "url": "https://www.similarweb.com", "description": { "zh": "分析网站流量、受众与竞争格局。", "en": "Analyze website traffic, audiences and competitors." }, "tags": { "zh": ["流量", "竞品"], "en": ["Traffic", "Competition"] } },
+        { "name": { "zh": "Semrush", "en": "Semrush" }, "url": "https://www.semrush.com", "description": { "zh": "SEO、关键词和竞争对手研究平台。", "en": "SEO, keyword and competitive research platform." }, "tags": { "zh": ["SEO", "关键词"], "en": ["SEO", "Keywords"] } },
+        { "name": { "zh": "Kalodata", "en": "Kalodata" }, "url": "https://www.kalodata.com", "description": { "zh": "TikTok 电商数据、商品与达人分析。", "en": "TikTok Shop data for products, creators and trends." }, "tags": { "zh": ["TikTok", "数据"], "en": ["TikTok", "Data"] } }
+      ]
+    },
+    {
+      "id": "marketing",
+      "icon": "📣",
+      "name": { "zh": "广告与获客", "en": "Advertising & Growth" },
+      "description": { "zh": "管理付费流量、邮件营销与客户增长。", "en": "Manage paid acquisition, email automation and customer growth." },
+      "sites": [
+        { "name": { "zh": "Google Ads", "en": "Google Ads" }, "url": "https://ads.google.com", "description": { "zh": "搜索、购物、展示与 YouTube 广告投放。", "en": "Run Search, Shopping, Display and YouTube campaigns." }, "tags": { "zh": ["广告", "Google"], "en": ["Advertising", "Google"] }, "featured": true },
+        { "name": { "zh": "Meta Business Suite", "en": "Meta Business Suite" }, "url": "https://business.facebook.com", "description": { "zh": "管理 Facebook、Instagram 广告和主页内容。", "en": "Manage Facebook and Instagram advertising and pages." }, "tags": { "zh": ["社媒", "Meta"], "en": ["Social", "Meta"] }, "featured": true },
+        { "name": { "zh": "TikTok Ads Manager", "en": "TikTok Ads Manager" }, "url": "https://ads.tiktok.com", "description": { "zh": "TikTok 全球广告创建、受众和效果管理。", "en": "Create and optimize TikTok campaigns worldwide." }, "tags": { "zh": ["TikTok", "广告"], "en": ["TikTok", "Ads"] }, "featured": true },
+        { "name": { "zh": "Pinterest Business", "en": "Pinterest Business" }, "url": "https://business.pinterest.com", "description": { "zh": "利用视觉内容触达购物意图明确的用户。", "en": "Reach high-intent shoppers through visual discovery." }, "tags": { "zh": ["Pinterest", "流量"], "en": ["Pinterest", "Traffic"] } },
+        { "name": { "zh": "Microsoft Advertising", "en": "Microsoft Advertising" }, "url": "https://ads.microsoft.com", "description": { "zh": "Bing 与 Microsoft 广告网络投放平台。", "en": "Advertising across Bing and the Microsoft network." }, "tags": { "zh": ["搜索广告", "Bing"], "en": ["Search Ads", "Bing"] } },
+        { "name": { "zh": "Klaviyo", "en": "Klaviyo" }, "url": "https://www.klaviyo.com", "description": { "zh": "电商邮件与短信自动化营销平台。", "en": "Email and SMS automation built for ecommerce." }, "tags": { "zh": ["邮件", "自动化"], "en": ["Email", "Automation"] } },
+        { "name": { "zh": "Mailchimp", "en": "Mailchimp" }, "url": "https://mailchimp.com", "description": { "zh": "邮件营销、自动化与受众管理。", "en": "Email marketing, automation and audience management." }, "tags": { "zh": ["邮件", "CRM"], "en": ["Email", "CRM"] } },
+        { "name": { "zh": "HubSpot", "en": "HubSpot" }, "url": "https://www.hubspot.com", "description": { "zh": "营销、销售、客服一体化 CRM。", "en": "Connected CRM for marketing, sales and customer service." }, "tags": { "zh": ["CRM", "营销"], "en": ["CRM", "Marketing"] } }
+      ]
+    },
+    {
+      "id": "social-content",
+      "icon": "🎬",
+      "name": { "zh": "社媒与内容", "en": "Social & Content" },
+      "description": { "zh": "制作内容、经营社媒账号并连接红人和消费者。", "en": "Create content, manage social channels and connect with creators." },
+      "sites": [
+        { "name": { "zh": "TikTok Business", "en": "TikTok Business" }, "url": "https://www.tiktok.com/business", "description": { "zh": "品牌短视频、直播和营销资源中心。", "en": "Brand resources for short video, live commerce and marketing." }, "tags": { "zh": ["TikTok", "内容"], "en": ["TikTok", "Content"] }, "featured": true },
+        { "name": { "zh": "YouTube Creators", "en": "YouTube Creators" }, "url": "https://www.youtube.com/creators", "description": { "zh": "频道运营、内容增长与创作者资源。", "en": "Channel growth, content strategy and creator resources." }, "tags": { "zh": ["视频", "YouTube"], "en": ["Video", "YouTube"] } },
+        { "name": { "zh": "Instagram Business", "en": "Instagram Business" }, "url": "https://business.instagram.com", "description": { "zh": "品牌账号、内容营销与购物功能。", "en": "Brand accounts, content marketing and shopping tools." }, "tags": { "zh": ["Instagram", "社媒"], "en": ["Instagram", "Social"] } },
+        { "name": { "zh": "Pinterest", "en": "Pinterest" }, "url": "https://www.pinterest.com", "description": { "zh": "通过灵感内容长期获取自然流量。", "en": "Build long-lasting organic discovery with visual content." }, "tags": { "zh": ["图片", "流量"], "en": ["Visual", "Traffic"] } },
+        { "name": { "zh": "LinkedIn Marketing", "en": "LinkedIn Marketing" }, "url": "https://business.linkedin.com", "description": { "zh": "面向 B2B 采购和品牌合作的专业网络。", "en": "Professional network for B2B sourcing, sales and partnerships." }, "tags": { "zh": ["B2B", "LinkedIn"], "en": ["B2B", "LinkedIn"] } },
+        { "name": { "zh": "Later", "en": "Later" }, "url": "https://later.com", "description": { "zh": "社媒内容排期、发布和分析工具。", "en": "Plan, publish and analyze social media content." }, "tags": { "zh": ["排期", "社媒"], "en": ["Scheduler", "Social"] } },
+        { "name": { "zh": "Hootsuite", "en": "Hootsuite" }, "url": "https://www.hootsuite.com", "description": { "zh": "多平台社媒管理和内容协作。", "en": "Multi-channel social media management and collaboration." }, "tags": { "zh": ["管理", "社媒"], "en": ["Management", "Social"] } },
+        { "name": { "zh": "Canva", "en": "Canva" }, "url": "https://www.canva.com", "description": { "zh": "快速制作广告图、商品图和社媒素材。", "en": "Create ad creatives, product graphics and social assets." }, "tags": { "zh": ["设计", "素材"], "en": ["Design", "Assets"] }, "featured": true }
+      ]
+    },
+    {
+      "id": "logistics-supply",
+      "icon": "🚚",
+      "name": { "zh": "物流与供应链", "en": "Logistics & Supply Chain" },
+      "description": { "zh": "寻找货源、协调头程尾程并跟踪全球包裹。", "en": "Source products, coordinate freight and track global shipments." },
+      "sites": [
+        { "name": { "zh": "Alibaba.com", "en": "Alibaba.com" }, "url": "https://www.alibaba.com", "description": { "zh": "全球 B2B 采购与供应商搜索平台。", "en": "Global B2B sourcing and supplier discovery." }, "tags": { "zh": ["采购", "B2B"], "en": ["Sourcing", "B2B"] }, "featured": true },
+        { "name": { "zh": "1688", "en": "1688" }, "url": "https://www.1688.com", "description": { "zh": "中国货源批发、工厂与一件代发资源。", "en": "China wholesale marketplace for factories and dropshipping." }, "tags": { "zh": ["货源", "采购"], "en": ["Wholesale", "Sourcing"] }, "featured": true },
+        { "name": { "zh": "17TRACK", "en": "17TRACK" }, "url": "https://www.17track.net", "description": { "zh": "多承运商国际包裹查询和物流 API。", "en": "Multi-carrier tracking and logistics APIs." }, "tags": { "zh": ["追踪", "包裹"], "en": ["Tracking", "Parcels"] } },
+        { "name": { "zh": "Ship24", "en": "Ship24" }, "url": "https://www.ship24.com", "description": { "zh": "全球快递和邮政包裹追踪服务。", "en": "Global courier and postal shipment tracking." }, "tags": { "zh": ["追踪", "物流"], "en": ["Tracking", "Logistics"] } },
+        { "name": { "zh": "云途物流", "en": "YunExpress" }, "url": "https://www.yunexpress.com", "description": { "zh": "面向跨境电商的专线物流与仓储服务。", "en": "Cross-border line haul and fulfillment services." }, "tags": { "zh": ["专线", "履约"], "en": ["Line Haul", "Fulfillment"] } },
+        { "name": { "zh": "4PX 递四方", "en": "4PX" }, "url": "https://www.4px.com", "description": { "zh": "跨境物流、海外仓与全球配送服务。", "en": "Cross-border logistics, overseas warehousing and delivery." }, "tags": { "zh": ["海外仓", "物流"], "en": ["Warehousing", "Logistics"] } },
+        { "name": { "zh": "DHL", "en": "DHL" }, "url": "https://www.dhl.com", "description": { "zh": "国际快递、供应链和通关服务。", "en": "International express, supply chain and customs services." }, "tags": { "zh": ["快递", "全球"], "en": ["Express", "Global"] } },
+        { "name": { "zh": "Maersk", "en": "Maersk" }, "url": "https://www.maersk.com", "description": { "zh": "全球海运、订舱和综合供应链服务。", "en": "Global ocean freight, booking and integrated supply chain services." }, "tags": { "zh": ["海运", "订舱"], "en": ["Ocean", "Booking"] } }
+      ]
+    },
+    {
+      "id": "payments-finance",
+      "icon": "💳",
+      "name": { "zh": "支付与财税", "en": "Payments & Finance" },
+      "description": { "zh": "收付款、换汇、资金管理和税务合规服务。", "en": "Accept payments, move funds and manage cross-border tax." },
+      "sites": [
+        { "name": { "zh": "Stripe", "en": "Stripe" }, "url": "https://stripe.com", "description": { "zh": "面向互联网业务的全球在线收款基础设施。", "en": "Global payment infrastructure for online businesses." }, "tags": { "zh": ["支付", "独立站"], "en": ["Payments", "DTC"] }, "featured": true },
+        { "name": { "zh": "PayPal Business", "en": "PayPal Business" }, "url": "https://www.paypal.com/business", "description": { "zh": "全球买家熟悉的在线收付款和商户工具。", "en": "Familiar global checkout, payments and merchant tools." }, "tags": { "zh": ["收款", "PayPal"], "en": ["Checkout", "PayPal"] }, "featured": true },
+        { "name": { "zh": "Payoneer", "en": "Payoneer" }, "url": "https://www.payoneer.com", "description": { "zh": "跨境收款、多币种账户与供应商付款。", "en": "Cross-border receivables, multi-currency accounts and payouts." }, "tags": { "zh": ["收款", "多币种"], "en": ["Receivables", "Multi-currency"] } },
+        { "name": { "zh": "Airwallex", "en": "Airwallex" }, "url": "https://www.airwallex.com", "description": { "zh": "全球收单、企业账户和跨境付款平台。", "en": "Global acquiring, business accounts and cross-border payments." }, "tags": { "zh": ["企业账户", "支付"], "en": ["Business Account", "Payments"] } },
+        { "name": { "zh": "PingPong", "en": "PingPong" }, "url": "https://www.pingpongx.com", "description": { "zh": "跨境卖家收款、结汇和资金管理。", "en": "Collection, settlement and treasury services for sellers." }, "tags": { "zh": ["收款", "结汇"], "en": ["Collection", "Settlement"] } },
+        { "name": { "zh": "WorldFirst", "en": "WorldFirst" }, "url": "https://www.worldfirst.com", "description": { "zh": "跨境收款、换汇与全球账户服务。", "en": "Cross-border collections, FX and global accounts." }, "tags": { "zh": ["收款", "换汇"], "en": ["Payments", "FX"] } },
+        { "name": { "zh": "Wise Business", "en": "Wise Business" }, "url": "https://wise.com/business", "description": { "zh": "多币种账户、国际转账和汇率工具。", "en": "Multi-currency accounts, transfers and transparent FX." }, "tags": { "zh": ["转账", "汇率"], "en": ["Transfers", "FX"] } },
+        { "name": { "zh": "Avalara", "en": "Avalara" }, "url": "https://www.avalara.com", "description": { "zh": "销售税、VAT 和跨境税务合规自动化。", "en": "Automated sales tax, VAT and cross-border compliance." }, "tags": { "zh": ["税务", "合规"], "en": ["Tax", "Compliance"] } }
+      ]
+    },
+    {
+      "id": "operations-erp",
+      "icon": "🧩",
+      "name": { "zh": "运营与 ERP", "en": "Operations & ERP" },
+      "description": { "zh": "集中处理商品、订单、库存、采购和财务流程。", "en": "Centralize listings, orders, inventory, purchasing and finance." },
+      "sites": [
+        { "name": { "zh": "店小秘", "en": "Dianxiaomi" }, "url": "https://www.dianxiaomi.com", "description": { "zh": "跨境电商订单、刊登、采购和库存管理。", "en": "Listings, orders, purchasing and inventory for cross-border sellers." }, "tags": { "zh": ["ERP", "订单"], "en": ["ERP", "Orders"] }, "featured": true },
+        { "name": { "zh": "马帮 ERP", "en": "Mabang ERP" }, "url": "https://www.mabangerp.com", "description": { "zh": "多平台订单、仓储、供应链和数据管理。", "en": "Multi-channel orders, warehouse, supply chain and analytics." }, "tags": { "zh": ["ERP", "供应链"], "en": ["ERP", "Supply Chain"] } },
+        { "name": { "zh": "领星 ERP", "en": "Lingxing ERP" }, "url": "https://www.lingxing.com", "description": { "zh": "亚马逊精细化运营、财务和广告管理。", "en": "Amazon operations, finance and advertising management." }, "tags": { "zh": ["Amazon", "ERP"], "en": ["Amazon", "ERP"] } },
+        { "name": { "zh": "积加 ERP", "en": "Jijia ERP" }, "url": "https://www.jijiacloud.com", "description": { "zh": "面向亚马逊卖家的数字化运营系统。", "en": "Digital operations platform focused on Amazon sellers." }, "tags": { "zh": ["Amazon", "运营"], "en": ["Amazon", "Operations"] } },
+        { "name": { "zh": "通途 ERP", "en": "Tongtool" }, "url": "https://www.tongtool.com", "description": { "zh": "跨境电商刊登、订单和仓储解决方案。", "en": "Cross-border listing, order and warehouse solutions." }, "tags": { "zh": ["刊登", "ERP"], "en": ["Listing", "ERP"] } },
+        { "name": { "zh": "易仓 ERP", "en": "Eccang ERP" }, "url": "https://www.eccang.com", "description": { "zh": "跨境电商和海外仓一体化管理系统。", "en": "Integrated management for cross-border sellers and warehouses." }, "tags": { "zh": ["海外仓", "ERP"], "en": ["Warehouse", "ERP"] } },
+        { "name": { "zh": "旺店通", "en": "Wangdian" }, "url": "https://www.wangdian.cn", "description": { "zh": "电商订单、库存、采购和财务系统。", "en": "Commerce order, inventory, purchasing and finance systems." }, "tags": { "zh": ["订单", "库存"], "en": ["Orders", "Inventory"] } },
+        { "name": { "zh": "聚水潭", "en": "Jushuitan" }, "url": "https://www.jushuitan.com", "description": { "zh": "电商 SaaS ERP 与供应链协同平台。", "en": "SaaS ERP and supply chain collaboration for commerce." }, "tags": { "zh": ["SaaS", "ERP"], "en": ["SaaS", "ERP"] } }
+      ]
+    },
+    {
+      "id": "data-tools",
+      "icon": "📊",
+      "name": { "zh": "数据与效率工具", "en": "Data & Productivity" },
+      "description": { "zh": "分析经营数据，并用自动化和 AI 提升工作效率。", "en": "Analyze performance and improve workflows with automation and AI." },
+      "sites": [
+        { "name": { "zh": "Google Analytics", "en": "Google Analytics" }, "url": "https://analytics.google.com", "description": { "zh": "网站和应用流量、转化与受众分析。", "en": "Analyze traffic, conversion and audiences across web and apps." }, "tags": { "zh": ["分析", "转化"], "en": ["Analytics", "Conversion"] }, "featured": true },
+        { "name": { "zh": "Looker Studio", "en": "Looker Studio" }, "url": "https://lookerstudio.google.com", "description": { "zh": "免费连接多数据源并制作可视化报表。", "en": "Connect sources and build visual reports for free." }, "tags": { "zh": ["报表", "可视化"], "en": ["Reports", "Visualization"] } },
+        { "name": { "zh": "Tableau Public", "en": "Tableau Public" }, "url": "https://public.tableau.com", "description": { "zh": "分享型数据可视化与仪表盘工具。", "en": "Create and share data visualizations and dashboards." }, "tags": { "zh": ["仪表盘", "数据"], "en": ["Dashboard", "Data"] } },
+        { "name": { "zh": "DeepL", "en": "DeepL" }, "url": "https://www.deepl.com", "description": { "zh": "高质量商品文案和商务文档翻译。", "en": "High-quality translation for listings and business documents." }, "tags": { "zh": ["翻译", "文案"], "en": ["Translation", "Copy"] }, "featured": true },
+        { "name": { "zh": "Notion", "en": "Notion" }, "url": "https://www.notion.so", "description": { "zh": "团队知识库、项目与运营流程管理。", "en": "Knowledge base, projects and operational workflows." }, "tags": { "zh": ["协作", "知识库"], "en": ["Collaboration", "Knowledge"] } },
+        { "name": { "zh": "Airtable", "en": "Airtable" }, "url": "https://www.airtable.com", "description": { "zh": "用表格化数据库管理选品和供应商。", "en": "Spreadsheet-database hybrid for products and suppliers." }, "tags": { "zh": ["数据库", "表格"], "en": ["Database", "Spreadsheet"] } },
+        { "name": { "zh": "Zapier", "en": "Zapier" }, "url": "https://zapier.com", "description": { "zh": "连接常用 SaaS 并自动执行重复流程。", "en": "Connect SaaS tools and automate repetitive workflows." }, "tags": { "zh": ["自动化", "集成"], "en": ["Automation", "Integration"] } },
+        { "name": { "zh": "Make", "en": "Make" }, "url": "https://www.make.com", "description": { "zh": "可视化搭建复杂的跨应用自动化流程。", "en": "Visually build advanced multi-app automations." }, "tags": { "zh": ["自动化", "工作流"], "en": ["Automation", "Workflow"] } }
+      ]
+    },
+    {
+      "id": "compliance-learning",
+      "icon": "✅",
+      "name": { "zh": "合规与学习", "en": "Compliance & Learning" },
+      "description": { "zh": "处理品牌知识产权、税务合规并持续学习行业知识。", "en": "Protect brands, manage compliance and keep learning." },
+      "sites": [
+        { "name": { "zh": "Amazon Brand Registry", "en": "Amazon Brand Registry" }, "url": "https://brandservices.amazon.com", "description": { "zh": "保护和运营亚马逊品牌，使用品牌工具。", "en": "Protect and grow Amazon brands with official tools." }, "tags": { "zh": ["品牌", "Amazon"], "en": ["Brand", "Amazon"] }, "featured": true },
+        { "name": { "zh": "美国专利商标局", "en": "USPTO" }, "url": "https://www.uspto.gov", "description": { "zh": "查询和申请美国商标、专利与知识产权。", "en": "Search and apply for US trademarks, patents and IP protection." }, "tags": { "zh": ["商标", "美国"], "en": ["Trademark", "US"] } },
+        { "name": { "zh": "欧盟知识产权局", "en": "EUIPO" }, "url": "https://www.euipo.europa.eu", "description": { "zh": "欧盟商标、外观设计和知识产权服务。", "en": "EU trademarks, designs and intellectual property services." }, "tags": { "zh": ["欧盟", "知识产权"], "en": ["EU", "IP"] } },
+        { "name": { "zh": "WIPO 全球品牌数据库", "en": "WIPO Global Brand Database" }, "url": "https://branddb.wipo.int", "description": { "zh": "跨多个国家数据库检索商标。", "en": "Search trademarks across multiple international databases." }, "tags": { "zh": ["商标", "全球"], "en": ["Trademark", "Global"] } },
+        { "name": { "zh": "欧盟 VAT OSS", "en": "EU VAT One Stop Shop" }, "url": "https://vat-one-stop-shop.ec.europa.eu", "description": { "zh": "欧盟跨境 B2C 增值税申报官方入口。", "en": "Official portal for EU cross-border B2C VAT reporting." }, "tags": { "zh": ["VAT", "欧盟"], "en": ["VAT", "EU"] } },
+        { "name": { "zh": "英国 VAT 注册", "en": "UK VAT Registration" }, "url": "https://www.gov.uk/vat-registration", "description": { "zh": "英国政府增值税注册和规则说明。", "en": "Official UK guidance and registration for VAT." }, "tags": { "zh": ["VAT", "英国"], "en": ["VAT", "UK"] } },
+        { "name": { "zh": "Shopify 电商博客", "en": "Shopify Blog" }, "url": "https://www.shopify.com/blog", "description": { "zh": "独立站运营、营销和电商增长文章。", "en": "Guides for DTC operations, marketing and commerce growth." }, "tags": { "zh": ["学习", "独立站"], "en": ["Learning", "DTC"] } },
+        { "name": { "zh": "雨果跨境", "en": "Cifnews" }, "url": "https://www.cifnews.com", "description": { "zh": "跨境电商行业新闻、平台动态和运营知识。", "en": "Cross-border industry news, marketplace updates and guides." }, "tags": { "zh": ["资讯", "社区"], "en": ["News", "Community"] } }
+      ]
+    }
+  ]
+}
