@@ -1474,15 +1474,3 @@ html[data-theme="dark"] .footer strong {
     border-radius: 18px;
   }
 }
-
-.affiliate-badge {
-  color: #ffffff;
-  background: linear-gradient(135deg, #0f6bff, #00a884);
-  box-shadow: 0 4px 12px rgba(15, 107, 255, 0.22);
-  letter-spacing: 0;
-}
-
-html[data-theme="dark"] .affiliate-badge {
-  color: #07101e;
-  background: linear-gradient(135deg, #78b4ff, #54d6ad);
-}

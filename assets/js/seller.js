@@ -10,7 +10,6 @@
       browse: "浏览全部",
       featured: "热门入口",
       popular: "热门",
-      affiliate: "联盟",
       results: (count) => `当前显示 ${count} 个网站`,
       itemCount: (count) => `${count} 个网站`,
       emptyTitle: "没有找到匹配的网站",
@@ -23,7 +22,6 @@
       browse: "Browse all",
       featured: "Popular picks",
       popular: "Popular",
-      affiliate: "Affiliate",
       results: (count) => `${count} websites shown`,
       itemCount: (count) => `${count} websites`,
       emptyTitle: "No matching websites",
@@ -176,9 +174,9 @@
     const linkRel = site.affiliate
       ? "sponsored noopener noreferrer"
       : "noopener noreferrer";
-    const badge = site.affiliate
-      ? `<span class="featured-badge affiliate-badge">${copy.affiliate}</span>`
-      : (site.featured ? `<span class="featured-badge">${copy.popular}</span>` : "");
+    const badge = site.featured
+      ? `<span class="featured-badge">${copy.popular}</span>`
+      : "";
 
     return `
       <a
