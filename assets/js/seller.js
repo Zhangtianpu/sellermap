@@ -37,7 +37,8 @@
     filteredCount: 0,
     bannerIndex: 0,
     bannerTimer: null,
-    bannerPaused: false
+    bannerPaused: false,
+    activeCategoryLock: null
   };
 
   const escapeHtml = (value) => String(value)
@@ -91,6 +92,18 @@
     }))
   );
 
+  const setActiveCategory = (categoryId) => {
+    document.querySelectorAll("[data-category-link]").forEach((link) => {
+      const active = link.dataset.categoryLink === categoryId;
+      link.classList.toggle("active", active);
+      if (active) {
+        link.setAttribute("aria-current", "true");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
   const renderSidebar = () => {
     const nav = document.querySelector("#category-nav");
     nav.innerHTML = state.data.categories.map((category) => `
@@ -102,9 +115,16 @@
     `).join("");
 
     nav.addEventListener("click", (event) => {
-      if (event.target.closest("a")) {
-        document.body.classList.remove("menu-open");
-      }
+      const link = event.target.closest("a[data-category-link]");
+      if (!link) return;
+
+      state.activeCategoryLock = link.dataset.categoryLink;
+      setActiveCategory(state.activeCategoryLock);
+      document.body.classList.remove("menu-open");
+
+      window.setTimeout(() => {
+        state.activeCategoryLock = null;
+      }, 800);
     });
   };
 
@@ -384,24 +404,46 @@
   };
 
   const bindActiveNavigation = () => {
-    if (!("IntersectionObserver" in window)) return;
-
     const links = Array.from(document.querySelectorAll("[data-category-link]"));
-    const byId = new Map(links.map((link) => [link.dataset.categoryLink, link]));
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+    const sections = Array.from(document.querySelectorAll(".category-section"));
+    if (!links.length || !sections.length) return;
 
-      if (!visible.length) return;
-      links.forEach((link) => link.classList.remove("active"));
-      byId.get(visible[0].target.id)?.classList.add("active");
-    }, {
-      rootMargin: "-18% 0px -68% 0px",
-      threshold: 0
-    });
+    let ticking = false;
 
-    document.querySelectorAll(".category-section").forEach((section) => observer.observe(section));
+    const updateActiveCategory = () => {
+      ticking = false;
+
+      if (state.activeCategoryLock) {
+        setActiveCategory(state.activeCategoryLock);
+        return;
+      }
+
+      const topbarHeight = document.querySelector(".topbar")?.getBoundingClientRect().height || 0;
+      const marker = window.scrollY + topbarHeight + 70;
+      const nearPageBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+      let activeSection = sections[0];
+
+      if (nearPageBottom) {
+        activeSection = sections[sections.length - 1];
+      } else {
+        sections.forEach((section) => {
+          const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+          if (sectionTop <= marker) activeSection = section;
+        });
+      }
+
+      setActiveCategory(activeSection.id);
+    };
+
+    const requestUpdate = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateActiveCategory);
+    };
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    updateActiveCategory();
   };
 
   const renderMeta = () => {
