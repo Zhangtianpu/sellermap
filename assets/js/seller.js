@@ -10,6 +10,7 @@
       browse: "浏览全部",
       featured: "热门入口",
       popular: "热门",
+      affiliate: "联盟",
       results: (count) => `当前显示 ${count} 个网站`,
       itemCount: (count) => `${count} 个网站`,
       emptyTitle: "没有找到匹配的网站",
@@ -22,6 +23,7 @@
       browse: "Browse all",
       featured: "Popular picks",
       popular: "Popular",
+      affiliate: "Affiliate",
       results: (count) => `${count} websites shown`,
       itemCount: (count) => `${count} websites`,
       emptyTitle: "No matching websites",
@@ -171,17 +173,24 @@
       site.categoryName
     ].join(" ").toLocaleLowerCase(lang);
 
+    const linkRel = site.affiliate
+      ? "sponsored noopener noreferrer"
+      : "noopener noreferrer";
+    const badge = site.affiliate
+      ? `<span class="featured-badge affiliate-badge">${copy.affiliate}</span>`
+      : (site.featured ? `<span class="featured-badge">${copy.popular}</span>` : "");
+
     return `
       <a
         class="site-card"
         href="${escapeHtml(site.url)}"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="${linkRel}"
         style="--accent-h: ${getHue(site.url)}"
         data-search="${escapeHtml(searchable)}"
         data-site-name="${escapeHtml(name)}"
       >
-        ${site.featured ? `<span class="featured-badge">${copy.popular}</span>` : ""}
+        ${badge}
         <span class="site-logo" aria-hidden="true">${escapeHtml(getInitials(name))}</span>
         <span class="site-main">
           <strong class="site-name">${escapeHtml(name)}</strong>

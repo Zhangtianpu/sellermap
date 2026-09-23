@@ -90,7 +90,8 @@ Google Analytics 4 配置位于 `data/site-config.json`，当前衡量 ID 为 `G
 - `cn/contact.html`、`en/contact.html`：联系页面
 - `cn/privacy.html`、`en/privacy.html`：隐私政策
 - `data/sites.json`：分类、网站和 Banner 数据
-- `data/site-config.json`：站点域名和 AdSense 配置
+- `data/site-config.json`：站点域名、AdSense 和 Analytics 配置
+- `data/affiliate-programs.csv`：已加入的联盟计划台账
 - `ads.txt`：Google AdSense 发布商授权记录
 - `assets/css/seller.css`：页面样式
 - `assets/js/seller.js`：分类、卡片、搜索和移动端交互
