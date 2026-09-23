@@ -65,14 +65,9 @@ SITE_URL=https://your-domain.com npm run seo
 
 ## Google AdSense
 
-AdSense 预留配置位于 `data/site-config.json`。当前 `enabled` 为 `false`，页面不会加载任何 Google 广告脚本。
+AdSense 配置位于 `data/site-config.json`，当前已启用发布商 ID `ca-pub-2532162099328025`。网站根目录的 `ads.txt` 已按 Google 提供的授权记录配置。
 
-获得 AdSense 账号后：
-
-1. 将 `adsense.enabled` 改为 `true`
-2. 将 `adsense.clientId` 改为 `ca-pub-xxxxxxxxxxxxxxxx`
-3. 确认隐私政策中的广告说明准确反映实际使用的服务
-4. 在网站根目录添加 AdSense 提供的 `ads.txt`
+如需临时关闭广告脚本，将 `adsense.enabled` 改为 `false` 即可。更换 AdSense 账号时，需要同步更新 `adsense.clientId` 和 `ads.txt`，并确保隐私政策准确反映实际使用的广告服务。
 
 ## 联系方式
 
@@ -90,6 +85,7 @@ AdSense 预留配置位于 `data/site-config.json`。当前 `enabled` 为 `false
 - `cn/privacy.html`、`en/privacy.html`：隐私政策
 - `data/sites.json`：分类、网站和 Banner 数据
 - `data/site-config.json`：站点域名和 AdSense 配置
+- `ads.txt`：Google AdSense 发布商授权记录
 - `assets/css/seller.css`：页面样式
 - `assets/js/seller.js`：分类、卡片、搜索和移动端交互
 - `assets/js/theme.js`：黑白主题
