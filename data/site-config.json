@@ -5,5 +5,9 @@
     "enabled": true,
     "clientId": "ca-pub-2532162099328025",
     "autoAds": true
+  },
+  "analytics": {
+    "enabled": true,
+    "measurementId": "G-1KC28CWQ4F"
   }
 }

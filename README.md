@@ -69,6 +69,12 @@ AdSense 配置位于 `data/site-config.json`，当前已启用发布商 ID `ca-p
 
 如需临时关闭广告脚本，将 `adsense.enabled` 改为 `false` 即可。更换 AdSense 账号时，需要同步更新 `adsense.clientId` 和 `ads.txt`，并确保隐私政策准确反映实际使用的广告服务。
 
+## Google Analytics
+
+Google Analytics 4 配置位于 `data/site-config.json`，当前衡量 ID 为 `G-1KC28CWQ4F`。`assets/js/analytics.js` 会在启用后向所有中英文内容页面加载 Google 标签，并发送页面浏览数据。
+
+如需临时关闭，将 `analytics.enabled` 改为 `false`。
+
 ## 联系方式
 
 公开服务邮箱：`sellermap.service@gmail.com`。
@@ -90,6 +96,7 @@ AdSense 配置位于 `data/site-config.json`，当前已启用发布商 ID `ca-p
 - `assets/js/seller.js`：分类、卡片、搜索和移动端交互
 - `assets/js/theme.js`：黑白主题
 - `assets/js/adsense.js`：按配置加载 AdSense
+- `assets/js/analytics.js`：按配置加载 Google Analytics 4
 - `scripts/generate-sitemap.mjs`：站点地图生成工具
 - `server.mjs`：零依赖本地静态服务器
 
