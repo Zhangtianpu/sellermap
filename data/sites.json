@@ -203,6 +203,43 @@
         { "name": { "zh": "Shopify 电商博客", "en": "Shopify Blog" }, "url": "https://www.shopify.com/blog", "description": { "zh": "独立站运营、营销和电商增长文章。", "en": "Guides for DTC operations, marketing and commerce growth." }, "tags": { "zh": ["学习", "独立站"], "en": ["Learning", "DTC"] } },
         { "name": { "zh": "雨果跨境", "en": "Cifnews" }, "url": "https://www.cifnews.com", "description": { "zh": "跨境电商行业新闻、平台动态和运营知识。", "en": "Cross-border industry news, marketplace updates and guides." }, "tags": { "zh": ["资讯", "社区"], "en": ["News", "Community"] } }
       ]
+    },
+    {
+      "id": "ai-image-translation",
+      "icon": "🖼️",
+      "name": { "zh": "AI 图像与翻译", "en": "AI Image & Translation" },
+      "description": { "zh": "翻译图片文字、生成商品主图并快速制作电商视觉素材。", "en": "Translate text in images, generate product hero images and create ecommerce visuals." },
+      "sites": [
+        { "name": { "zh": "ImageTranslate.AI", "en": "ImageTranslate.AI" }, "url": "https://www.imagetranslate.ai/", "description": { "zh": "识别图片文字并翻译，尽量保留原图版式与设计。", "en": "Translate text in images while preserving the original layout and design." }, "tags": { "zh": ["图片翻译", "多语言"], "en": ["Image Translation", "Localization"] }, "featured": true },
+        { "name": { "zh": "Google Lens", "en": "Google Lens" }, "url": "https://lens.google.com/", "description": { "zh": "识别图片中的文字、商品和场景，并支持即时翻译。", "en": "Recognize text, products and objects in images with instant translation." }, "tags": { "zh": ["识图", "翻译"], "en": ["Visual Search", "Translation"] } },
+        { "name": { "zh": "Google 图片翻译", "en": "Google Translate Images" }, "url": "https://translate.google.com/?op=images", "description": { "zh": "上传图片识别文字，并翻译成目标语言。", "en": "Upload an image to detect and translate text into another language." }, "tags": { "zh": ["图片翻译", "免费"], "en": ["Image Translation", "Free"] }, "featured": true },
+        { "name": { "zh": "Yandex OCR 翻译", "en": "Yandex OCR Translate" }, "url": "https://translate.yandex.com/ocr", "description": { "zh": "通过 OCR 提取并翻译照片或截图中的文字。", "en": "Extract and translate text from photos and screenshots with OCR." }, "tags": { "zh": ["OCR", "翻译"], "en": ["OCR", "Translation"] } },
+        { "name": { "zh": "OCR.Space", "en": "OCR.Space" }, "url": "https://ocr.space/", "description": { "zh": "从图片和扫描件提取文字，再进行多语言翻译。", "en": "Extract text from images and scans for translation workflows." }, "tags": { "zh": ["文字识别", "OCR"], "en": ["Text Recognition", "OCR"] } },
+        { "name": { "zh": "Photoroom", "en": "Photoroom" }, "url": "https://www.photoroom.com/", "description": { "zh": "AI 抠图、背景替换和商品主图快速制作。", "en": "AI background removal, scene replacement and product photo creation." }, "tags": { "zh": ["商品图", "抠图"], "en": ["Product Photos", "Background"] }, "featured": true },
+        { "name": { "zh": "Pebblely", "en": "Pebblely" }, "url": "https://pebblely.com/", "description": { "zh": "上传商品图，自动生成不同风格的产品场景照。", "en": "Turn product cutouts into polished scenes in multiple visual styles." }, "tags": { "zh": ["商品场景", "主图"], "en": ["Product Scenes", "Hero Images"] }, "featured": true },
+        { "name": { "zh": "Flair AI", "en": "Flair AI" }, "url": "https://flair.ai/", "description": { "zh": "用 AI 生成品牌商品图和营销视觉场景。", "en": "Generate branded product imagery and marketing scenes with AI." }, "tags": { "zh": ["品牌视觉", "商品图"], "en": ["Brand Visuals", "Product Images"] } },
+        { "name": { "zh": "WeShop AI", "en": "WeShop AI" }, "url": "https://www.weshop.ai/", "description": { "zh": "面向电商卖家的 AI 商品图生成和图片编辑工具。", "en": "AI product image generation and editing built for ecommerce sellers." }, "tags": { "zh": ["电商图片", "AI改图"], "en": ["Ecommerce Images", "AI Editing"] } },
+        { "name": { "zh": "SellerPic", "en": "SellerPic" }, "url": "https://www.sellerpic.ai/", "description": { "zh": "快速生成适合电商平台展示的商品图片和模特图。", "en": "Create ecommerce listing images, product scenes and model photography." }, "tags": { "zh": ["商品主图", "模特图"], "en": ["Product Images", "Model Photos"] } },
+        { "name": { "zh": "Adobe Firefly", "en": "Adobe Firefly" }, "url": "https://firefly.adobe.com/", "description": { "zh": "生成式填充、扩图和 AI 创意图片生成工具。", "en": "Generative fill, expand and AI image creation from Adobe." }, "tags": { "zh": ["AI绘图", "创意"], "en": ["Image Generation", "Creative"] } },
+        { "name": { "zh": "Clipdrop", "en": "Clipdrop" }, "url": "https://clipdrop.co/", "description": { "zh": "背景移除、物体清理、重新打光等图片编辑工具。", "en": "Background removal, object cleanup, relighting and image editing." }, "tags": { "zh": ["AI改图", "背景移除"], "en": ["AI Editing", "Background Removal"] } }
+      ]
+    },
+    {
+      "id": "ai-commerce-content",
+      "icon": "🤖",
+      "name": { "zh": "AI 内容与运营", "en": "AI Commerce & Content" },
+      "description": { "zh": "用 AI 撰写商品文案、分析业务、制作视频并完成本地化。", "en": "Use AI for product copy, business analysis, video creation and localization." },
+      "sites": [
+        { "name": { "zh": "ChatGPT", "en": "ChatGPT" }, "url": "https://chatgpt.com/", "description": { "zh": "分析图片、生成和修改商品文案，并辅助日常运营。", "en": "Analyze images, create product copy and support daily ecommerce operations." }, "tags": { "zh": ["AI助手", "文案"], "en": ["AI Assistant", "Copywriting"] }, "featured": true },
+        { "name": { "zh": "Google Gemini", "en": "Google Gemini" }, "url": "https://gemini.google.com/", "description": { "zh": "结合 Google 服务进行内容生成、图片理解和数据分析。", "en": "Generate content, understand images and analyze data with Google AI." }, "tags": { "zh": ["AI助手", "Google"], "en": ["AI Assistant", "Google"] } },
+        { "name": { "zh": "Microsoft Copilot", "en": "Microsoft Copilot" }, "url": "https://copilot.microsoft.com/", "description": { "zh": "生成文案、分析数据并辅助办公和电商运营。", "en": "Create copy, analyze data and support business workflows with Microsoft AI." }, "tags": { "zh": ["AI助手", "办公"], "en": ["AI Assistant", "Productivity"] } },
+        { "name": { "zh": "Shopify Magic", "en": "Shopify Magic" }, "url": "https://www.shopify.com/magic", "description": { "zh": "为 Shopify 商家生成商品描述、邮件和营销内容。", "en": "Generate product descriptions, emails and marketing copy for Shopify stores." }, "tags": { "zh": ["独立站", "商品文案"], "en": ["DTC", "Product Copy"] }, "featured": true },
+        { "name": { "zh": "Describely", "en": "Describely" }, "url": "https://www.describely.ai/", "description": { "zh": "批量生成和管理电商商品标题、卖点和描述。", "en": "Generate and manage ecommerce product titles, benefits and descriptions at scale." }, "tags": { "zh": ["商品文案", "批量"], "en": ["Product Copy", "Bulk"] }, "featured": true },
+        { "name": { "zh": "Hypotenuse AI", "en": "Hypotenuse AI" }, "url": "https://www.hypotenuse.ai/", "description": { "zh": "批量生成 SEO 商品描述、博客和营销内容。", "en": "Create SEO product descriptions, blogs and marketing content in bulk." }, "tags": { "zh": ["SEO文案", "批量"], "en": ["SEO Copy", "Bulk"] } },
+        { "name": { "zh": "HeyGen", "en": "HeyGen" }, "url": "https://www.heygen.com/", "description": { "zh": "生成数字人口播和商品视频，并支持多语言本地化。", "en": "Create AI avatar and product videos with multilingual localization." }, "tags": { "zh": ["AI视频", "本地化"], "en": ["AI Video", "Localization"] }, "featured": true },
+        { "name": { "zh": "ElevenLabs", "en": "ElevenLabs" }, "url": "https://elevenlabs.io/", "description": { "zh": "为商品广告和短视频生成多语言 AI 配音。", "en": "Generate multilingual AI voiceovers for ads, product videos and social content." }, "tags": { "zh": ["AI配音", "多语言"], "en": ["AI Voice", "Multilingual"] } }
+      ]
     }
+
   ]
 }
