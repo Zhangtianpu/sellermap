@@ -3,6 +3,7 @@
 
   const lang = document.body.dataset.lang === "en" ? "en" : "zh";
   const dataUrl = document.body.dataset.dataUrl || "../data/sites.json";
+  const articlesUrl = document.body.dataset.articlesUrl || "../data/articles.json";
 
   const copy = {
     zh: {
@@ -16,7 +17,9 @@
       emptyTitle: "没有找到匹配的网站",
       emptyText: "换一个关键词试试，例如“Amazon”“物流”或“支付”。",
       failedTitle: "数据加载失败",
-      failedText: "请通过本地服务器打开页面，不要直接双击 HTML 文件。"
+      failedText: "请通过本地服务器打开页面，不要直接双击 HTML 文件。",
+      tested: "真实实测",
+      readGuide: "阅读实测文章"
     },
     en: {
       allCategories: "All categories",
@@ -29,12 +32,15 @@
       emptyTitle: "No matching websites",
       emptyText: "Try another keyword such as “Amazon”, “logistics” or “payments”.",
       failedTitle: "Unable to load data",
-      failedText: "Open the site through a local server instead of loading the HTML file directly."
+      failedText: "Open the site through a local server instead of loading the HTML file directly.",
+      tested: "Live tested",
+      readGuide: "Read the hands-on guide"
     }
   }[lang];
 
   const state = {
     data: null,
+    articles: [],
     query: "",
     filteredCount: 0,
     bannerIndex: 0,
@@ -52,6 +58,60 @@
 
   const getSiteName = (site) => site.name[lang];
   const getCategoryName = (category) => category.name[lang];
+
+  const getArticleImage = (article) => {
+    const screenshot = article.sections?.find((section) => section.screenshot)?.screenshot;
+    if (!screenshot?.src) return null;
+    return {
+      src: `../${screenshot.src.replace(/^\.\.\/\.\.\//, "")}`,
+      alt: screenshot.alt?.[lang] || article.title?.[lang] || article.toolName
+    };
+  };
+
+  const formatArticleDate = (value) => {
+    const date = new Date(`${value}T00:00:00`);
+    if (Number.isNaN(date.getTime())) return value;
+    return new Intl.DateTimeFormat(lang === "zh" ? "zh-CN" : "en", {
+      year: "numeric",
+      month: lang === "zh" ? "long" : "short",
+      day: "numeric"
+    }).format(date);
+  };
+
+  const renderArticles = () => {
+    const section = document.querySelector("#latest-articles");
+    const container = document.querySelector("#article-preview-grid");
+    if (!section || !container || !state.articles.length) return;
+
+    const articles = [...state.articles]
+      .sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)))
+      .slice(0, 3);
+
+    container.innerHTML = articles.map((article) => {
+      const image = getArticleImage(article);
+      return `
+        <a class="article-preview-card" href="articles/${encodeURIComponent(article.slug)}.html">
+          ${image ? `
+            <span class="article-preview-image">
+              <img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt)}" loading="lazy">
+              <span class="article-preview-badge">${copy.tested}</span>
+            </span>
+          ` : ""}
+          <span class="article-preview-body">
+            <span class="article-preview-meta">
+              <strong>${escapeHtml(article.toolName)}</strong>
+              <time datetime="${escapeHtml(article.publishedAt)}">${escapeHtml(formatArticleDate(article.publishedAt))}</time>
+            </span>
+            <span class="article-preview-title">${escapeHtml(article.title[lang])}</span>
+            <span class="article-preview-summary">${escapeHtml(article.summary[lang])}</span>
+            <span class="article-preview-cta">${copy.readGuide} <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+      `;
+    }).join("");
+
+    section.hidden = false;
+  };
 
   const getInitials = (value) => {
     const clean = String(value).trim();
@@ -465,6 +525,7 @@
     document.querySelector("#category-total").textContent = categories;
     document.querySelector("#site-total").textContent = sites;
     document.querySelector("#mobile-category-total").textContent = categories;
+    document.querySelector("#result-count").textContent = copy.results(sites);
     document.querySelector("#year").textContent = new Date().getFullYear();
   };
 
@@ -482,12 +543,20 @@
 
   const init = async () => {
     try {
-      const response = await fetch(dataUrl);
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      state.data = await response.json();
+      const [sitesResponse, articlesResponse] = await Promise.all([
+        fetch(dataUrl),
+        fetch(articlesUrl).catch(() => null)
+      ]);
+      if (!sitesResponse.ok) throw new Error(`HTTP ${sitesResponse.status}`);
+      state.data = await sitesResponse.json();
+      if (articlesResponse?.ok) {
+        const articleData = await articlesResponse.json();
+        state.articles = Array.isArray(articleData.articles) ? articleData.articles : [];
+      }
       renderSidebar();
       renderQuickLinks();
       renderBanners();
+      renderArticles();
       renderSections();
       renderMeta();
       bindSearch();

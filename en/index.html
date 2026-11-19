@@ -84,7 +84,7 @@
   <script defer src="../assets/js/adsense.js" data-config="../data/site-config.json" data-adsense-loader></script>
   <script defer src="../assets/js/analytics.js" data-config="../data/site-config.json" data-analytics-loader></script>
 </head>
-<body data-lang="en" data-data-url="../data/sites.json">
+<body data-lang="en" data-data-url="../data/sites.json" data-articles-url="../data/articles.json">
   <header class="topbar">
     <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="sidebar">
       <span></span>
@@ -153,6 +153,17 @@
           <span><strong id="site-total">101</strong> curated websites</span>
           <span>Press <kbd>/</kbd> to search</span>
         </div>
+      </section>
+
+      <section class="latest-articles" id="latest-articles" aria-labelledby="latest-articles-title" hidden>
+        <div class="latest-articles-head">
+          <div>
+            <span class="latest-articles-eyebrow">Live test · Original screenshots</span>
+            <h2 id="latest-articles-title">Latest hands-on guides</h2>
+          </div>
+          <a class="latest-articles-all" href="articles/">View all guides <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="article-preview-grid" id="article-preview-grid"></div>
       </section>
 
       <section class="main-content">
