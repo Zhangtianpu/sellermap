@@ -73,7 +73,8 @@
         { "name": { "zh": "Squarespace Commerce", "en": "Squarespace Commerce" }, "url": "https://www.squarespace.com/ecommerce-website", "description": { "zh": "兼顾设计表现与电商功能的一体化建站工具。", "en": "All-in-one design and commerce website builder." }, "tags": { "zh": ["设计", "建站"], "en": ["Design", "Commerce"] } },
         { "name": { "zh": "SHOPLINE", "en": "SHOPLINE" }, "url": "https://www.shopline.com", "description": { "zh": "面向全球商家的智慧零售与独立站平台。", "en": "Smart retail and DTC infrastructure for global merchants." }, "tags": { "zh": ["独立站", "全球"], "en": ["DTC", "Global"] } },
         { "name": { "zh": "Ueeshop", "en": "Ueeshop" }, "url": "https://www.ueeshop.com", "description": { "zh": "面向外贸企业的独立站建站服务。", "en": "Cross-border storefront solutions for export businesses." }, "tags": { "zh": ["外贸", "建站"], "en": ["Export", "Store Builder"] } },
-        { "name": { "zh": "XShoppy", "en": "XShoppy" }, "url": "https://www.xshoppy.com", "description": { "zh": "服务跨境卖家的独立站与运营平台。", "en": "DTC and operations platform for cross-border sellers." }, "tags": { "zh": ["独立站", "运营"], "en": ["DTC", "Operations"] } }
+        { "name": { "zh": "XShoppy", "en": "XShoppy" }, "url": "https://www.xshoppy.com", "description": { "zh": "服务跨境卖家的独立站与运营平台。", "en": "DTC and operations platform for cross-border sellers." }, "tags": { "zh": ["独立站", "运营"], "en": ["DTC", "Operations"] } },
+        { "name": { "zh": "Spree Commerce", "en": "Spree Commerce" }, "url": "https://spreecommerce.org/", "description": { "zh": "支持跨境、B2B、批发和多供应商市场的开源无头电商平台。", "en": "Open-source headless commerce for cross-border, B2B, wholesale and multi-vendor marketplaces." }, "tags": { "zh": ["开源", "B2B", "跨境建站"], "en": ["Open Source", "B2B", "Cross-border"] }, "addedAt": "2026-11-19", "sourceUrl": "https://github.com/spree/spree" }
       ]
     },
     {
@@ -89,7 +90,8 @@
         { "name": { "zh": "卖家精灵", "en": "SellerSprite" }, "url": "https://www.sellersprite.com", "description": { "zh": "亚马逊关键词、选品与市场分析工具。", "en": "Amazon keyword, product and market intelligence." }, "tags": { "zh": ["Amazon", "数据"], "en": ["Amazon", "Analytics"] } },
         { "name": { "zh": "Similarweb", "en": "Similarweb" }, "url": "https://www.similarweb.com", "description": { "zh": "分析网站流量、受众与竞争格局。", "en": "Analyze website traffic, audiences and competitors." }, "tags": { "zh": ["流量", "竞品"], "en": ["Traffic", "Competition"] } },
         { "name": { "zh": "Semrush", "en": "Semrush" }, "url": "https://www.semrush.com", "description": { "zh": "SEO、关键词和竞争对手研究平台。", "en": "SEO, keyword and competitive research platform." }, "tags": { "zh": ["SEO", "关键词"], "en": ["SEO", "Keywords"] } },
-        { "name": { "zh": "Kalodata", "en": "Kalodata" }, "url": "https://www.kalodata.com", "description": { "zh": "TikTok 电商数据、商品与达人分析。", "en": "TikTok Shop data for products, creators and trends." }, "tags": { "zh": ["TikTok", "数据"], "en": ["TikTok", "Data"] } }
+        { "name": { "zh": "Kalodata", "en": "Kalodata" }, "url": "https://www.kalodata.com", "description": { "zh": "TikTok 电商数据、商品与达人分析。", "en": "TikTok Shop data for products, creators and trends." }, "tags": { "zh": ["TikTok", "数据"], "en": ["TikTok", "Data"] } },
+        { "name": { "zh": "Accio", "en": "Accio" }, "url": "https://www.accio.com/", "description": { "zh": "通过 AI 完成商品发现、供应商匹配、采购分析和新品设计。", "en": "Use AI for product discovery, supplier matching, sourcing analysis and new product design." }, "tags": { "zh": ["B2B采购", "供应商", "AI选品"], "en": ["B2B Sourcing", "Suppliers", "AI Research"] }, "addedAt": "2026-11-19", "sourceUrl": "https://www1.accio.com/about-us" }
       ]
     },
     {
@@ -169,7 +171,8 @@
         { "name": { "zh": "通途 ERP", "en": "Tongtool" }, "url": "https://www.tongtool.com", "description": { "zh": "跨境电商刊登、订单和仓储解决方案。", "en": "Cross-border listing, order and warehouse solutions." }, "tags": { "zh": ["刊登", "ERP"], "en": ["Listing", "ERP"] } },
         { "name": { "zh": "易仓 ERP", "en": "Eccang ERP" }, "url": "https://www.eccang.com", "description": { "zh": "跨境电商和海外仓一体化管理系统。", "en": "Integrated management for cross-border sellers and warehouses." }, "tags": { "zh": ["海外仓", "ERP"], "en": ["Warehouse", "ERP"] } },
         { "name": { "zh": "旺店通", "en": "Wangdian" }, "url": "https://www.wangdian.cn", "description": { "zh": "电商订单、库存、采购和财务系统。", "en": "Commerce order, inventory, purchasing and finance systems." }, "tags": { "zh": ["订单", "库存"], "en": ["Orders", "Inventory"] } },
-        { "name": { "zh": "聚水潭", "en": "Jushuitan" }, "url": "https://www.jushuitan.com", "description": { "zh": "电商 SaaS ERP 与供应链协同平台。", "en": "SaaS ERP and supply chain collaboration for commerce." }, "tags": { "zh": ["SaaS", "ERP"], "en": ["SaaS", "ERP"] } }
+        { "name": { "zh": "聚水潭", "en": "Jushuitan" }, "url": "https://www.jushuitan.com", "description": { "zh": "电商 SaaS ERP 与供应链协同平台。", "en": "SaaS ERP and supply chain collaboration for commerce." }, "tags": { "zh": ["SaaS", "ERP"], "en": ["SaaS", "ERP"] } },
+        { "name": { "zh": "OpenLinker", "en": "OpenLinker" }, "url": "https://openlinker.io/en/", "description": { "zh": "自托管的开源电商集成平台，同步店铺、市场、库存、物流和发票流程。", "en": "Self-hosted open-source integration for stores, marketplaces, inventory, shipping and invoicing." }, "tags": { "zh": ["开源", "订单同步", "多渠道"], "en": ["Open Source", "Order Sync", "Multichannel"] }, "addedAt": "2026-11-19", "sourceUrl": "https://github.com/openlinker-project/openlinker" }
       ]
     },
     {
