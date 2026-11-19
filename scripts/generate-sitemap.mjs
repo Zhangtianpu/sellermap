@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const siteUrl = (process.env.SITE_URL || "").replace(/\/+$/, "");
+const articleData = JSON.parse(await readFile(resolve("data/articles.json"), "utf8"));
 
 if (!/^https?:\/\/[^/]+$/i.test(siteUrl)) {
   console.error("Usage: SITE_URL=https://your-domain.com npm run seo");
@@ -15,7 +16,13 @@ const pages = [
   { path: "cn/contact.html", priority: "0.5", changefreq: "monthly" },
   { path: "en/contact.html", priority: "0.5", changefreq: "monthly" },
   { path: "cn/privacy.html", priority: "0.3", changefreq: "yearly" },
-  { path: "en/privacy.html", priority: "0.3", changefreq: "yearly" }
+  { path: "en/privacy.html", priority: "0.3", changefreq: "yearly" },
+  { path: "cn/articles/", priority: "0.8", changefreq: "daily" },
+  { path: "en/articles/", priority: "0.7", changefreq: "daily" },
+  ...articleData.articles.flatMap((article) => [
+    { path: `cn/articles/${article.slug}.html`, priority: "0.8", changefreq: "monthly" },
+    { path: `en/articles/${article.slug}.html`, priority: "0.7", changefreq: "monthly" }
+  ])
 ];
 
 const lastmod = new Date().toISOString().slice(0, 10);

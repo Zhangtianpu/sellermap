@@ -1,0 +1,130 @@
+:root {
+  --article-width: 900px;
+}
+
+.article-shell {
+  width: min(var(--article-width), calc(100% - 36px));
+  margin: 0 auto;
+  padding: 42px 0 72px;
+}
+
+.article-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 34px;
+}
+
+.article-nav a {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.article-hero,
+.article-card,
+.article-section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.article-hero {
+  padding: 34px;
+  margin-bottom: 22px;
+}
+
+.article-kicker {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.article-hero h1 {
+  margin: 12px 0 14px;
+  font-size: clamp(30px, 5vw, 50px);
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+
+.article-hero p,
+.article-section p,
+.article-card p {
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 18px;
+  color: #8492a5;
+  font-size: 12px;
+}
+
+.article-section {
+  padding: 28px 30px;
+  margin-top: 18px;
+}
+
+.article-section h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  letter-spacing: -.025em;
+}
+
+.article-figure {
+  margin: 24px 0 0;
+}
+
+.article-figure img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.article-figure figcaption {
+  margin-top: 10px;
+  color: #7d8ba0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.article-sources {
+  margin-top: 24px;
+  padding: 22px 28px;
+  background: var(--surface-soft);
+  border-radius: 16px;
+}
+
+.article-list {
+  display: grid;
+  gap: 18px;
+}
+
+.article-card {
+  display: block;
+  padding: 26px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.article-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.article-card h2 {
+  margin: 9px 0;
+  font-size: 25px;
+}
+
+@media (max-width: 640px) {
+  .article-shell { width: min(100% - 24px, var(--article-width)); padding-top: 24px; }
+  .article-hero, .article-section { padding: 22px; }
+  .article-hero h1 { font-size: 32px; }
+}

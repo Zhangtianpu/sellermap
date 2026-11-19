@@ -1,0 +1,75 @@
+{
+  "articles": [
+    {
+      "slug": "importyeti-supplier-research",
+      "toolName": "ImportYeti",
+      "toolUrl": "https://www.importyeti.com/",
+      "publishedAt": "2026-11-19",
+      "testedAt": "2026-11-19",
+      "title": {
+        "zh": "ImportYeti 实测：如何从海运记录反查品牌供应商",
+        "en": "ImportYeti hands-on: researching suppliers through shipment records"
+      },
+      "summary": {
+        "zh": "我们实际搜索 Patagonia，查看企业进口概览、供应商名单、出货次数和商品 HS Code，验证 ImportYeti 在供应商背景调查中的用途。",
+        "en": "We searched for Patagonia and reviewed its import overview, supplier list, shipment counts and product HS codes to test ImportYeti for supplier research."
+      },
+      "sections": [
+        {
+          "heading": { "zh": "测试说明", "en": "Test setup" },
+          "paragraphs": {
+            "zh": ["本次测试使用 ImportYeti 无需登录的公开查询功能。我们以 Patagonia 为例，仅查看公开海运进口记录，没有注册账号、下载数据或提交个人信息。", "页面数据会持续更新，文章中的数字和界面以 2026 年 11 月 19 日实际测试时为准。"],
+            "en": ["This test used ImportYeti's public search without signing in. We used Patagonia as an example and only viewed public sea-import records; no account was created and no personal information was submitted.", "The service updates its records over time. Numbers and interface details in this guide reflect the live test on November 19, 2026."]
+          }
+        },
+        {
+          "heading": { "zh": "第一步：搜索目标企业", "en": "Step 1: Search for a target company" },
+          "paragraphs": {
+            "zh": ["在首页输入 Patagonia 后，结果页同时列出公司和供应商身份，并展示总出货次数、最近一次出货日期及关联名称。先确认公司地址和类型，可以减少同名企业造成的误判。"],
+            "en": ["After entering Patagonia, the results page showed both company and supplier profiles, along with total shipments, latest shipment dates and related names. Checking the company type and address first helps avoid selecting a similarly named business."]
+          },
+          "screenshot": {
+            "src": "../../assets/images/articles/importyeti/search-results.png",
+            "alt": { "zh": "ImportYeti 搜索 Patagonia 后的真实结果页面", "en": "Live ImportYeti search results for Patagonia" },
+            "caption": { "zh": "真实操作截图：搜索结果包含企业类型、地址、总出货次数和最近出货时间。", "en": "Live test screenshot: results include company type, address, total shipments and latest shipment date." }
+          }
+        },
+        {
+          "heading": { "zh": "第二步：查看进口活动概览", "en": "Step 2: Review the import overview" },
+          "paragraphs": {
+            "zh": ["进入企业详情后，可以看到最近出货时间、海运记录总量、平均 TEU 和估算运输支出。趋势图适合判断采购是否具有季节性，但估算值只能作为调查线索，不能替代企业提供的正式数据。"],
+            "en": ["The company profile shows the latest shipment, total sea shipments, average TEU and estimated shipping spend. The timeline can help identify seasonality, but estimates should be treated as research signals rather than official company figures."]
+          },
+          "screenshot": {
+            "src": "../../assets/images/articles/importyeti/company-overview.png",
+            "alt": { "zh": "ImportYeti 的 Patagonia 企业进口活动概览", "en": "Patagonia import overview in ImportYeti" },
+            "caption": { "zh": "真实操作截图：企业详情页展示进口活动指标和时间趋势。", "en": "Live test screenshot: the company page shows import metrics and shipment trends." }
+          }
+        },
+        {
+          "heading": { "zh": "第三步：分析供应商和商品线索", "en": "Step 3: Analyze suppliers and product signals" },
+          "paragraphs": {
+            "zh": ["供应商表格列出了供应商名称、所在国家、出货次数、商品描述和 HS Code。实务中可以用出货次数判断合作活跃度，再用商品描述和 HS Code 筛选与自己品类相关的工厂。", "这些记录只能证明公开提单中出现过相关关系，不代表当前仍在合作，也不等于供应商已经通过质量、合规或交付能力审核。联系供应商前仍需独立验厂和资质核验。"],
+            "en": ["The supplier table lists supplier names, countries, shipment counts, product descriptions and HS codes. Shipment frequency can indicate activity, while product descriptions and HS codes help narrow the list to factories relevant to a product category.", "These records only show relationships found in public bills of lading. They do not prove a current partnership or validate quality, compliance or delivery capability. Independent due diligence is still required before contacting or selecting a supplier."]
+          },
+          "screenshot": {
+            "src": "../../assets/images/articles/importyeti/suppliers.png",
+            "alt": { "zh": "ImportYeti 中 Patagonia 的供应商分析表", "en": "Patagonia supplier table in ImportYeti" },
+            "caption": { "zh": "真实操作截图：供应商列表显示国家、出货次数、商品描述和 HS Code。", "en": "Live test screenshot: the supplier list shows countries, shipment counts, product descriptions and HS codes." }
+          }
+        },
+        {
+          "heading": { "zh": "实测结论", "en": "Hands-on verdict" },
+          "paragraphs": {
+            "zh": ["ImportYeti 适合用于美国进口商和供应商关系的初步调查，尤其适合寻找同类品牌的供应链线索。它不能替代供应商审核，也不覆盖所有运输方式和所有国家，因此更适合作为供应商发现流程的第一步。"],
+            "en": ["ImportYeti is useful for early-stage research into US importers and supplier relationships, especially when looking for supply-chain leads from comparable brands. It does not replace supplier verification and does not cover every shipping mode or country, so it works best as the first step in a sourcing workflow."]
+          }
+        }
+      ],
+      "sources": [
+        { "label": "ImportYeti", "url": "https://www.importyeti.com/" },
+        { "label": "U.S. Customs and Border Protection ACE", "url": "https://www.cbp.gov/trade/automated" }
+      ]
+    }
+  ]
+}

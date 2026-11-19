@@ -214,7 +214,8 @@ html[data-theme="dark"] .theme-icon-moon {
   box-shadow: 0 0 0 4px rgba(24, 167, 106, 0.12);
 }
 
-.language-switch {
+.language-switch,
+.articles-link {
   padding: 7px 12px;
   color: var(--brand);
   background: #eef5ff;
@@ -223,7 +224,8 @@ html[data-theme="dark"] .theme-icon-moon {
   font-weight: 800;
 }
 
-.language-switch:hover {
+.language-switch:hover,
+.articles-link:hover {
   color: #fff;
   background: var(--brand);
 }
@@ -975,7 +977,8 @@ html[data-theme="dark"] .status-pill {
   background: #102c23;
 }
 
-html[data-theme="dark"] .language-switch {
+html[data-theme="dark"] .language-switch,
+html[data-theme="dark"] .articles-link {
   color: #8dbaff;
   background: #132846;
 }

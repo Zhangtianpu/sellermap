@@ -1,6 +1,7 @@
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 
 const data = JSON.parse(await readFile(new URL("../data/sites.json", import.meta.url), "utf8"));
+const articleData = JSON.parse(await readFile(new URL("../data/articles.json", import.meta.url), "utf8"));
 const errors = [];
 const seenCategoryIds = new Set();
 const seenUrls = new Map();
@@ -78,10 +79,65 @@ for (const [categoryIndex, category] of (data.categories || []).entries()) {
   }
 }
 
+const seenArticleSlugs = new Set();
+for (const [articleIndex, article] of (articleData.articles || []).entries()) {
+  const articleLabel = `articles[${articleIndex}]`;
+  if (!article.slug || seenArticleSlugs.has(article.slug) || !/^[a-z0-9-]+$/.test(article.slug)) {
+    errors.push(`${articleLabel}.slug is missing, invalid or duplicated`);
+  }
+  seenArticleSlugs.add(article.slug);
+
+  if (!article.toolName || !article.toolUrl || !article.publishedAt || !article.testedAt) {
+    errors.push(`${articleLabel} is missing toolName, toolUrl, publishedAt or testedAt`);
+  }
+  for (const language of ["zh", "en"]) {
+    if (!article.title?.[language] || !article.summary?.[language]) {
+      errors.push(`${articleLabel} is missing ${language} title or summary`);
+    }
+  }
+  if (!Array.isArray(article.sections) || article.sections.length < 2) {
+    errors.push(`${articleLabel}.sections must contain at least two sections`);
+    continue;
+  }
+
+  let screenshotCount = 0;
+  for (const [sectionIndex, section] of article.sections.entries()) {
+    for (const language of ["zh", "en"]) {
+      if (!section.heading?.[language] || !Array.isArray(section.paragraphs?.[language]) || section.paragraphs[language].length === 0) {
+        errors.push(`${articleLabel}.sections[${sectionIndex}] is missing ${language} content`);
+      }
+    }
+    if (section.screenshot) {
+      screenshotCount += 1;
+      const relativePath = section.screenshot.src.replace(/^\.\.\/\.\.\//, "");
+      try {
+        await access(new URL(`../${relativePath}`, import.meta.url));
+      } catch {
+        errors.push(`${articleLabel}.sections[${sectionIndex}] screenshot file does not exist`);
+      }
+      for (const language of ["zh", "en"]) {
+        if (!section.screenshot.alt?.[language] || !section.screenshot.caption?.[language]) {
+          errors.push(`${articleLabel}.sections[${sectionIndex}] screenshot needs ${language} alt and caption`);
+        }
+      }
+    }
+  }
+  if (screenshotCount < 2) {
+    errors.push(`${articleLabel} must include at least two real usage screenshots`);
+  }
+}
+
+const articleSlugsUsedBySites = new Set((data.categories || []).flatMap((category) =>
+  category.sites.map((site) => site.articleSlug).filter(Boolean)
+));
+for (const slug of articleSlugsUsedBySites) {
+  if (!seenArticleSlugs.has(slug)) errors.push(`site articleSlug ${slug} has no matching article`);
+}
+
 if (errors.length > 0) {
   console.error(`Site data validation failed with ${errors.length} error(s):`);
   errors.forEach((error) => console.error(`- ${error}`));
   process.exit(1);
 }
 
-console.log(`Validated ${seenUrls.size} sites across ${seenCategoryIds.size} categories.`);
+console.log(`Validated ${seenUrls.size} sites, ${seenCategoryIds.size} categories and ${seenArticleSlugs.size} article(s).`);
