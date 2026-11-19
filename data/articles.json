@@ -71,6 +71,181 @@
         { "label": "ImportYeti", "url": "https://www.importyeti.com/" },
         { "label": "U.S. Customs and Border Protection ACE", "url": "https://www.cbp.gov/trade/automated" }
       ]
+    },
+    {
+      "slug": "eu-ebike-market-entry-compliance-2027",
+      "contentType": "compliance",
+      "category": {
+        "zh": "电动自行车 B2B · 欧盟合规",
+        "en": "E-bike B2B · EU compliance"
+      },
+      "primaryUrl": "https://eur-lex.europa.eu/eli/reg/2013/168/2026-08-02/eng",
+      "publishedAt": "2026-11-19",
+      "verifiedAt": "2026-11-19",
+      "title": {
+        "zh": "欧盟电助力自行车进入市场：e-wildx 需要准备的 4 道合规关卡",
+        "en": "Entering the EU e-bike market: four compliance gates for e-wildx"
+      },
+      "summary": {
+        "zh": "基于欧盟截至 2026 年 11 月的法规原文，梳理 250W/25km/h 分类边界、2027 年机械法规切换、LMT 电池护照和线上产品信息要求，并转化为 e-wildx 可执行的资料清单。",
+        "en": "Using EU legal texts current to November 2026, this guide maps the 250W/25km/h classification boundary, the 2027 machinery-law transition, LMT battery passports and online product information into an actionable e-wildx checklist."
+      },
+      "sections": [
+        {
+          "heading": {
+            "zh": "先说结论：合规不是一张证书，而是一条证据链",
+            "en": "The core idea: compliance is an evidence chain, not one certificate"
+          },
+          "paragraphs": {
+            "zh": [
+              "对出口欧盟的电助力自行车，产品分类、整车机械安全、电池要求、线上信息和欧盟经济运营商责任相互连接。单独拿到一份测试报告，并不能证明具体 SKU、当前配置、说明书、标签和销售页面都处于一致状态。",
+              "本文是截至 2026 年 11 月 19 日的业务研究，不是法律意见。欧盟法规仍可能通过实施法案、协调标准清单和成员国执行规则继续更新；正式上市前应让欧盟进口商、合规负责人和具备对应范围的实验室复核每个 SKU。"
+            ],
+            "en": [
+              "For an e-bike entering the EU, vehicle classification, machinery safety, battery rules, online information and the responsibilities of EU economic operators form one connected chain. A single test report does not prove that a specific SKU, its current configuration, instructions, labels and sales page remain aligned.",
+              "This is business research verified on November 19, 2026, not legal advice. Implementing acts, harmonised-standard lists and Member State enforcement can continue to change; the EU importer, responsible operator and a properly scoped laboratory should review every SKU before market launch."
+            ]
+          }
+        },
+        {
+          "heading": {
+            "zh": "关卡一：先锁定 250W/25km/h 的车辆分类边界",
+            "en": "Gate 1: lock the 250W/25km/h vehicle-classification boundary"
+          },
+          "paragraphs": {
+            "zh": [
+              "欧盟法规 168/2013 第 2(2)(h) 条把一类脚踏助力自行车排除在该法规的机动车型式批准范围之外：最大连续额定功率不超过 250W；骑手停止踩踏时电机停止输出；助力随速度逐渐降低，并在达到 25km/h 之前切断。这里应核对的是整车控制逻辑和最大连续额定功率，而不只是网页上的营销名称。",
+              "满足这条排除条件不等于自动完成全部欧盟合规。它只解决 168/2013 的范围判断，整车仍需处理适用的机械安全、其他产品法规、标签、技术文件和销售国要求。超过边界的车型可能进入 L 类车辆体系，应在报价和样品确认之前单独分类，不能与普通 EPAC 共用一套声明。"
+            ],
+            "en": [
+              "Article 2(2)(h) of Regulation 168/2013 excludes a defined pedal-assist cycle from that Regulation's motor-vehicle type-approval scope: maximum continuous rated power no greater than 250W, motor output stopping when the cyclist stops pedalling, and assistance progressively reducing and cutting off before 25km/h. The control behaviour and continuous rating matter—not merely the marketing name shown on a product page.",
+              "Meeting this exclusion does not complete EU compliance. It only answers the scope question under Regulation 168/2013; machinery safety, other applicable product rules, labels, technical documentation and destination-country rules still need to be addressed. Models outside the boundary may fall into an L-category vehicle route and should not share one declaration with a standard EPAC."
+            ]
+          },
+          "image": {
+            "kind": "screenshot",
+            "src": "../../assets/images/articles/eu-ebike-market-entry-compliance-2027/vehicle-classification.jpg",
+            "sourceUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02013R0168-20260802",
+            "alt": {
+              "zh": "EUR-Lex 上欧盟法规 168/2013 关于 250W 和 25km/h 电助力自行车的原文",
+              "en": "EUR-Lex text of Regulation 168/2013 covering the 250W and 25km/h pedal-assist boundary"
+            },
+            "caption": {
+              "zh": "真实网页截图：法规原文同时限定连续额定功率、踩踏联动和 25km/h 前切断助力。",
+              "en": "Live webpage screenshot: the legal text combines continuous rated power, pedalling behaviour and assistance cut-off before 25km/h."
+            }
+          }
+        },
+        {
+          "heading": {
+            "zh": "关卡二：为 2027 年机械法规切换准备双时间线",
+            "en": "Gate 2: prepare a two-timeline plan for the 2027 machinery transition"
+          },
+          "paragraphs": {
+            "zh": [
+              "欧盟委员会说明，2027 年 1 月 20 日之前投放欧盟市场的机械产品仍必须符合机械指令 2006/42/EC；机械法规 (EU) 2023/1230 从 2027 年 1 月 20 日起强制适用。对在 2026 年末开发、但可能在 2027 年后出货的车型，e-wildx 不应只按下单日期判断，而应与进口商确认具体的“投放市场”时间和适用法规。",
+              "协调标准是证明符合基本安全要求的一种自愿路径，其引用需要在欧盟官方公报中发布。实际做法是为每个 SKU 建立一张法规—风险—测试—证据矩阵，并让实验室确认当前适用的标准版本和新旧机械法规过渡安排，而不是把一张历史测试证书直接复制到新配置。"
+            ],
+            "en": [
+              "The European Commission states that machinery placed on the EU market before January 20, 2027 must comply with Directive 2006/42/EC, while Regulation (EU) 2023/1230 becomes mandatory from January 20, 2027. For models developed in late 2026 but shipped after the transition, e-wildx should agree with the importer on the actual placing-on-the-market date rather than relying only on the order date.",
+              "Harmonised standards are a voluntary route for demonstrating conformity with essential requirements, and their references must be published in the Official Journal. In practice, each SKU needs a legislation–risk–test–evidence matrix, with a laboratory confirming the current standard editions and transition plan instead of reusing an old certificate for a changed configuration."
+            ]
+          }
+        },
+        {
+          "heading": {
+            "zh": "关卡三：把电池当成独立的数据产品管理",
+            "en": "Gate 3: manage the battery as a separate data product"
+          },
+          "paragraphs": {
+            "zh": [
+              "欧盟电池法规把电动自行车和电动滑板车电池归入轻型交通工具电池（LMT battery）。欧盟委员会概述的规则覆盖可持续性、安全、标签、供应链尽职调查和报废管理，而不是只有运输测试。",
+              "法规第 77 条规定，从 2027 年 2 月 18 日起，每个投放市场或投入使用的 LMT 电池都应具有电子电池护照，并通过唯一标识关联数据。对 e-wildx 而言，准备工作应前移到电芯和电池包供应商：先建立型号、化学体系、容量、制造工厂、合规声明、状态与寿命参数、维修拆解信息和责任人的字段字典，再评估未来 QR 码和电池护照由谁创建、更新和保存。",
+              "不要等到客户要求二维码时才开始补数据。更稳妥的采购条款是把法规所需数据、变更通知、批次追溯和持续更新责任写进电池供应协议，并确保更换电芯、BMS 或壳体后触发重新评估。"
+            ],
+            "en": [
+              "The EU Batteries Regulation classifies e-bike and e-scooter batteries as light means of transport (LMT) batteries. The Commission's overview spans sustainability, safety, labelling, supply-chain due diligence and end-of-life management—not only transport testing.",
+              "Article 77 requires each LMT battery placed on the market or put into service from February 18, 2027 to have an electronic battery passport linked to a unique identifier. e-wildx should move preparation upstream: define fields for battery model, chemistry, capacity, manufacturing plant, declarations, state-of-health and lifetime parameters, repair and dismantling information, and accountable owners; then decide who creates, updates and retains the passport and QR-linked data.",
+              "Waiting for a customer to request a QR code is too late. Supplier agreements should cover required data, change notification, batch traceability and ongoing updates, with changes to cells, BMS or enclosure triggering reassessment."
+            ]
+          },
+          "image": {
+            "kind": "screenshot",
+            "src": "../../assets/images/articles/eu-ebike-market-entry-compliance-2027/battery-passport.jpg",
+            "sourceUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02023R1542-20260813",
+            "alt": {
+              "zh": "EUR-Lex 上欧盟电池法规第 77 条 LMT 电池护照原文",
+              "en": "Article 77 of the EU Batteries Regulation on LMT battery passports in EUR-Lex"
+            },
+            "caption": {
+              "zh": "真实网页截图：第 77 条明确 2027 年 2 月 18 日起 LMT 电池需要电子电池护照。",
+              "en": "Live webpage screenshot: Article 77 sets the electronic battery-passport requirement for LMT batteries from February 18, 2027."
+            }
+          }
+        },
+        {
+          "heading": {
+            "zh": "关卡四：让产品页成为合规证据链的一部分",
+            "en": "Gate 4: make product pages part of the compliance evidence chain"
+          },
+          "paragraphs": {
+            "zh": [
+              "欧盟通用产品安全法规第 19 条要求，面向欧盟消费者的线上或远程销售要约清晰展示制造商名称及邮政和电子地址；制造商不在欧盟时还要展示欧盟责任人的名称及联系方式；同时提供产品图片、型号或其他识别信息，以及适用的警告和安全信息。",
+              "e-wildx 是 B2B 网站，因此先判断页面究竟是询盘展示，还是已经构成面向欧盟消费者的销售要约。即使页面只服务经销商，也建议建立可复用的“经销商合规资料包”，让客户能准确发布型号、制造商、欧盟责任人、警告、说明书版本和产品图片，减少下游自行复制错误信息。"
+            ],
+            "en": [
+              "Article 19 of the General Product Safety Regulation requires online or distance-sales offers aimed at EU consumers to clearly show the manufacturer's name and postal and electronic address; where the manufacturer is outside the EU, the EU responsible person's name and contact details; product identification including an image and type or other identifier; and applicable warnings and safety information.",
+              "Because e-wildx is a B2B website, first determine whether each page is an enquiry showcase or an offer targeted at EU consumers. Even for distributor-only pages, a reusable dealer compliance pack can help customers publish the correct model, manufacturer, EU responsible person, warnings, instruction revision and images instead of retyping inconsistent data."
+            ]
+          }
+        },
+        {
+          "heading": {
+            "zh": "对 e-wildx 的启发：一周内可以完成的检查清单",
+            "en": "What e-wildx can do: a one-week action checklist"
+          },
+          "paragraphs": {
+            "zh": [
+              "第一，给现有车型建立分类表：连续额定功率、最高助力速度、停止踩踏后的输出逻辑、油门或助推功能、目标国家和预定投放时间。任何一项超出普通 EPAC 边界时，单独升级评审。",
+              "第二，为每个 SKU 建立版本化证据包：BOM 与关键部件版本、风险评估、测试报告、符合性声明、标签、说明书、产品照片、序列号规则和变更记录。要求销售报价单引用明确的 SKU 与资料包版本。",
+              "第三，向电池供应商发一份 2027 数据问卷，确认电池护照字段、唯一标识、数据所有者、更新接口、可拆卸与更换方案、批次追溯和变更通知能力。把无法提供的数据标为供应链缺口，而不是网站文案问题。",
+              "第四，抽查 e-wildx 产品页和给经销商的素材包，检查型号是否唯一、规格是否与测试样品一致、是否存在“250W”与控制器或峰值功率表述混淆、警告和说明书版本是否可追溯。每月记录缺口关闭率、供应商资料按时率和配置变更后的重新评估周期。"
+            ],
+            "en": [
+              "First, create a classification sheet for every model: continuous rated power, maximum assisted speed, output behaviour when pedalling stops, throttle or walk-assist functions, target country and intended placing-on-the-market date. Escalate any model outside the standard EPAC boundary for a separate review.",
+              "Second, build a versioned evidence pack per SKU: BOM and critical-component revisions, risk assessment, test reports, declaration of conformity, labels, instructions, product photographs, serial-number rules and change history. Sales quotations should reference a defined SKU and evidence-pack revision.",
+              "Third, send battery suppliers a 2027 data questionnaire covering passport fields, unique identifiers, data ownership, update interfaces, removability and replacement design, batch traceability and change notification. Treat missing data as a supply-chain gap rather than a copywriting problem.",
+              "Fourth, sample-check e-wildx product pages and dealer media packs for unique model identification, alignment with the tested sample, confusion between the 250W continuous rating and controller or peak-power claims, and traceable warning and instruction revisions. Track gap-closure rate, on-time supplier data and reassessment lead time after configuration changes each month."
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "label": "EUR-Lex — Regulation (EU) No 168/2013, consolidated 2 August 2026",
+          "url": "https://eur-lex.europa.eu/eli/reg/2013/168/2026-08-02/eng"
+        },
+        {
+          "label": "European Commission — Machinery legislation and 20 January 2027 transition",
+          "url": "https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/machinery_en"
+        },
+        {
+          "label": "European Commission — Harmonised standards for machinery",
+          "url": "https://single-market-economy.ec.europa.eu/single-market/goods/european-standards/harmonised-standards/machinery-md_en"
+        },
+        {
+          "label": "EUR-Lex — Regulation (EU) 2023/1542, consolidated 13 August 2026",
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/1542/2026-08-13/eng"
+        },
+        {
+          "label": "European Commission — Batteries",
+          "url": "https://environment.ec.europa.eu/topics/waste-and-recycling/batteries_en"
+        },
+        {
+          "label": "EUR-Lex — General Product Safety Regulation, consolidated 29 May 2026",
+          "url": "https://eur-lex.europa.eu/eli/reg/2023/988/2026-05-29/eng"
+        }
+      ]
     }
   ]
 }

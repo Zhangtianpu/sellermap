@@ -21,6 +21,9 @@ const copy = {
 const getArticleLabel = (article, lang) => article.category?.[lang] || article.toolName || "SellerMap";
 const getArticleDate = (article) => article.testedAt || article.verifiedAt || article.publishedAt;
 const getSectionImage = (section) => section.image || section.screenshot;
+const latestArticles = [...articles]
+  .reverse()
+  .sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)));
 
 const pageHead = ({ lang, title, description, canonical, depth = "../.." }) => `<!DOCTYPE html>
 <html lang="${copy[lang].locale}">
@@ -42,7 +45,7 @@ for (const lang of ["zh", "en"]) {
   const outputDir = resolve(root, directory, "articles");
   await mkdir(outputDir, { recursive: true });
 
-  const cards = articles.map((article) => `
+  const cards = latestArticles.map((article) => `
       <a class="article-card" href="${escapeHtml(article.slug)}.html">
         <span class="article-kicker">${escapeHtml(getArticleLabel(article, lang))} · ${escapeHtml(article.publishedAt)}</span>
         <h2>${escapeHtml(article.title[lang])}</h2>

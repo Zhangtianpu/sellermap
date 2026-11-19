@@ -86,6 +86,7 @@
     if (!section || !container || !state.articles.length) return;
 
     const articles = [...state.articles]
+      .reverse()
       .sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)))
       .slice(0, 3);
 
