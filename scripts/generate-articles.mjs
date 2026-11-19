@@ -14,9 +14,13 @@ const escapeHtml = (value = "") => String(value)
   .replaceAll("'", "&#039;");
 
 const copy = {
-  zh: { locale: "zh-CN", home: "返回导航", guides: "实测文章", tested: "实际测试", published: "发布", open: "打开工具", sources: "参考来源", description: "SellerMap 实际操作跨境工具后整理的使用方法、截图和注意事项。" },
-  en: { locale: "en", home: "Back to directory", guides: "Hands-on guides", tested: "Tested", published: "Published", open: "Open tool", sources: "Sources", description: "Hands-on cross-border tool guides with real usage screenshots and practical caveats." }
+  zh: { locale: "zh-CN", home: "返回导航", guides: "跨境实战文章", verified: "资料核验", tested: "实际测试", published: "发布", open: "打开工具", source: "查看主要来源", sources: "参考来源", description: "面向外贸、B2B 与跨境业务的工具实测、供应链方法、SOHO 经验、行业研究和书籍启发。" },
+  en: { locale: "en", home: "Back to directory", guides: "Cross-border insights", verified: "Verified", tested: "Tested", published: "Published", open: "Open tool", source: "View primary source", sources: "Sources", description: "Practical tools, supply-chain methods, SOHO experience, industry research and book insights for B2B and cross-border operators." }
 };
+
+const getArticleLabel = (article, lang) => article.category?.[lang] || article.toolName || "SellerMap";
+const getArticleDate = (article) => article.testedAt || article.verifiedAt || article.publishedAt;
+const getSectionImage = (section) => section.image || section.screenshot;
 
 const pageHead = ({ lang, title, description, canonical, depth = "../.." }) => `<!DOCTYPE html>
 <html lang="${copy[lang].locale}">
@@ -40,7 +44,7 @@ for (const lang of ["zh", "en"]) {
 
   const cards = articles.map((article) => `
       <a class="article-card" href="${escapeHtml(article.slug)}.html">
-        <span class="article-kicker">${escapeHtml(article.toolName)} · ${escapeHtml(article.publishedAt)}</span>
+        <span class="article-kicker">${escapeHtml(getArticleLabel(article, lang))} · ${escapeHtml(article.publishedAt)}</span>
         <h2>${escapeHtml(article.title[lang])}</h2>
         <p>${escapeHtml(article.summary[lang])}</p>
       </a>`).join("");
@@ -57,23 +61,31 @@ for (const lang of ["zh", "en"]) {
   await writeFile(resolve(outputDir, "index.html"), indexHtml);
 
   for (const article of articles) {
-    const sections = article.sections.map((section) => `
+    const sections = article.sections.map((section) => {
+      const image = getSectionImage(section);
+      return `
     <section class="article-section">
       <h2>${escapeHtml(section.heading[lang])}</h2>
       ${section.paragraphs[lang].map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n      ")}
-      ${section.screenshot ? `<figure class="article-figure"><img src="${escapeHtml(section.screenshot.src)}" alt="${escapeHtml(section.screenshot.alt[lang])}" loading="lazy"><figcaption>${escapeHtml(section.screenshot.caption[lang])}</figcaption></figure>` : ""}
-    </section>`).join("");
-    const sources = article.sources.map((source) => `<li><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a></li>`).join("");
+      ${image ? `<figure class="article-figure"><img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt[lang])}" loading="lazy"><figcaption>${escapeHtml(image.caption[lang])}${image.credit ? ` · ${escapeHtml(image.credit[lang] || image.credit.en || image.credit.zh)}` : ""}</figcaption></figure>` : ""}
+    </section>`;
+    }).join("");
+    const sources = (article.sources || []).map((source) => `<li><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a></li>`).join("");
+    const isTool = !article.contentType || article.contentType === "tool";
+    const primaryUrl = article.toolUrl || article.primaryUrl;
+    const primaryLink = primaryUrl
+      ? `<a href="${escapeHtml(primaryUrl)}" target="_blank" rel="noopener noreferrer">${isTool ? copy[lang].open : copy[lang].source} ↗</a>`
+      : "";
     const html = `${pageHead({ lang, title: `${article.title[lang]} | SellerMap`, description: article.summary[lang], canonical: `${baseUrl}/${directory}/articles/${article.slug}.html` })}
 <body>
   <main class="article-shell">
     <nav class="article-nav"><a href="./">← ${copy[lang].guides}</a><a href="../../${lang === "zh" ? "en" : "cn"}/articles/${article.slug}.html">${lang === "zh" ? "EN" : "中文"}</a></nav>
     <article>
       <header class="article-hero">
-        <span class="article-kicker">${escapeHtml(article.toolName)} · ${copy[lang].tested}</span>
+        <span class="article-kicker">${escapeHtml(getArticleLabel(article, lang))} · ${isTool ? copy[lang].tested : copy[lang].verified}</span>
         <h1>${escapeHtml(article.title[lang])}</h1>
         <p>${escapeHtml(article.summary[lang])}</p>
-        <div class="article-meta"><span>${copy[lang].published}: ${escapeHtml(article.publishedAt)}</span><span>${copy[lang].tested}: ${escapeHtml(article.testedAt)}</span><a href="${escapeHtml(article.toolUrl)}" target="_blank" rel="noopener noreferrer">${copy[lang].open} ↗</a></div>
+        <div class="article-meta"><span>${copy[lang].published}: ${escapeHtml(article.publishedAt)}</span><span>${isTool ? copy[lang].tested : copy[lang].verified}: ${escapeHtml(getArticleDate(article))}</span>${primaryLink}</div>
       </header>${sections}
       <aside class="article-sources"><strong>${copy[lang].sources}</strong><ul>${sources}</ul></aside>
     </article>

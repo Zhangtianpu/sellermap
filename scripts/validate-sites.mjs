@@ -80,6 +80,7 @@ for (const [categoryIndex, category] of (data.categories || []).entries()) {
 }
 
 const seenArticleSlugs = new Set();
+const contentTypes = new Set(["tool", "synthesis", "supply-chain", "soho", "book", "e-bike", "marketing", "compliance", "case-study"]);
 for (const [articleIndex, article] of (articleData.articles || []).entries()) {
   const articleLabel = `articles[${articleIndex}]`;
   if (!article.slug || seenArticleSlugs.has(article.slug) || !/^[a-z0-9-]+$/.test(article.slug)) {
@@ -87,8 +88,27 @@ for (const [articleIndex, article] of (articleData.articles || []).entries()) {
   }
   seenArticleSlugs.add(article.slug);
 
-  if (!article.toolName || !article.toolUrl || !article.publishedAt || !article.testedAt) {
-    errors.push(`${articleLabel} is missing toolName, toolUrl, publishedAt or testedAt`);
+  const contentType = article.contentType || "tool";
+  if (!contentTypes.has(contentType)) {
+    errors.push(`${articleLabel}.contentType is not supported`);
+  }
+  if (!article.publishedAt || (!article.testedAt && !article.verifiedAt)) {
+    errors.push(`${articleLabel} is missing publishedAt or a testedAt/verifiedAt date`);
+  }
+  if (contentType === "tool" && (!article.toolName || !article.toolUrl || !article.testedAt)) {
+    errors.push(`${articleLabel} tool articles require toolName, toolUrl and testedAt`);
+  }
+  if (contentType !== "tool") {
+    for (const language of ["zh", "en"]) {
+      if (!article.category?.[language]) errors.push(`${articleLabel}.category.${language} is required`);
+    }
+  }
+  if (article.primaryUrl) {
+    try {
+      new URL(article.primaryUrl);
+    } catch {
+      errors.push(`${articleLabel}.primaryUrl must be a valid URL`);
+    }
   }
   for (const language of ["zh", "en"]) {
     if (!article.title?.[language] || !article.summary?.[language]) {
@@ -107,23 +127,45 @@ for (const [articleIndex, article] of (articleData.articles || []).entries()) {
         errors.push(`${articleLabel}.sections[${sectionIndex}] is missing ${language} content`);
       }
     }
-    if (section.screenshot) {
+    const image = section.image || section.screenshot;
+    if (image) {
       screenshotCount += 1;
-      const relativePath = section.screenshot.src.replace(/^\.\.\/\.\.\//, "");
+      const relativePath = image.src.replace(/^\.\.\/\.\.\//, "");
       try {
         await access(new URL(`../${relativePath}`, import.meta.url));
       } catch {
         errors.push(`${articleLabel}.sections[${sectionIndex}] screenshot file does not exist`);
       }
       for (const language of ["zh", "en"]) {
-        if (!section.screenshot.alt?.[language] || !section.screenshot.caption?.[language]) {
-          errors.push(`${articleLabel}.sections[${sectionIndex}] screenshot needs ${language} alt and caption`);
+        if (!image.alt?.[language] || !image.caption?.[language]) {
+          errors.push(`${articleLabel}.sections[${sectionIndex}] image needs ${language} alt and caption`);
+        }
+      }
+      if (section.image) {
+        if (!new Set(["screenshot", "licensed", "public-domain"]).has(image.kind)) {
+          errors.push(`${articleLabel}.sections[${sectionIndex}] image.kind must be screenshot, licensed or public-domain`);
+        }
+        try {
+          new URL(image.sourceUrl);
+        } catch {
+          errors.push(`${articleLabel}.sections[${sectionIndex}] image.sourceUrl must be a valid URL`);
+        }
+        if (image.kind === "licensed" || image.kind === "public-domain") {
+          for (const language of ["zh", "en"]) {
+            if (!image.credit?.[language]) {
+              errors.push(`${articleLabel}.sections[${sectionIndex}] sourced image needs ${language} credit`);
+            }
+          }
         }
       }
     }
   }
   if (screenshotCount < 2) {
-    errors.push(`${articleLabel} must include at least two real usage screenshots`);
+    errors.push(`${articleLabel} must include at least two real sourced images or usage screenshots`);
+  }
+
+  if (!Array.isArray(article.sources) || article.sources.length < 2) {
+    errors.push(`${articleLabel}.sources must contain at least two references`);
   }
 }
 

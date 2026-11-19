@@ -19,7 +19,7 @@
       failedTitle: "数据加载失败",
       failedText: "请通过本地服务器打开页面，不要直接双击 HTML 文件。",
       tested: "真实实测",
-      readGuide: "阅读实测文章"
+      readGuide: "阅读文章"
     },
     en: {
       allCategories: "All categories",
@@ -34,7 +34,7 @@
       failedTitle: "Unable to load data",
       failedText: "Open the site through a local server instead of loading the HTML file directly.",
       tested: "Live tested",
-      readGuide: "Read the hands-on guide"
+      readGuide: "Read article"
     }
   }[lang];
 
@@ -60,13 +60,15 @@
   const getCategoryName = (category) => category.name[lang];
 
   const getArticleImage = (article) => {
-    const screenshot = article.sections?.find((section) => section.screenshot)?.screenshot;
-    if (!screenshot?.src) return null;
+    const image = article.sections?.map((section) => section.image || section.screenshot).find(Boolean);
+    if (!image?.src) return null;
     return {
-      src: `../${screenshot.src.replace(/^\.\.\/\.\.\//, "")}`,
-      alt: screenshot.alt?.[lang] || article.title?.[lang] || article.toolName
+      src: `../${image.src.replace(/^\.\.\/\.\.\//, "")}`,
+      alt: image.alt?.[lang] || article.title?.[lang] || article.toolName || "SellerMap"
     };
   };
+
+  const getArticleLabel = (article) => article.category?.[lang] || article.toolName || "SellerMap";
 
   const formatArticleDate = (value) => {
     const date = new Date(`${value}T00:00:00`);
@@ -99,7 +101,7 @@
           ` : ""}
           <span class="article-preview-body">
             <span class="article-preview-meta">
-              <strong>${escapeHtml(article.toolName)}</strong>
+              <strong>${escapeHtml(getArticleLabel(article))}</strong>
               <time datetime="${escapeHtml(article.publishedAt)}">${escapeHtml(formatArticleDate(article.publishedAt))}</time>
             </span>
             <span class="article-preview-title">${escapeHtml(article.title[lang])}</span>
