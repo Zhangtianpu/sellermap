@@ -28,9 +28,30 @@ python3 -m http.server 4173 --bind 127.0.0.1
   "url": "https://example.com",
   "description": { "zh": "中文说明", "en": "English description" },
   "tags": { "zh": ["标签"], "en": ["Tag"] },
+  "addedAt": "2026-11-19",
+  "sourceUrl": "https://github.com/example/project",
   "featured": true
 }
 ```
+
+新收录工具可以填写 `addedAt` 和发现来源 `sourceUrl`。最近 30 天加入的工具会在中英文首页显示“新收录 / New”标记；来源只用于内部核验，不会展示给访客。
+
+修改数据后运行校验，检查必填中英文内容、链接格式和重复 URL：
+
+```bash
+npm run validate:data
+```
+
+## 每日内容发现规则
+
+自动发现任务应优先搜索 GitHub、Product Hunt、官方产品页和可信行业来源，并遵守以下发布门槛：
+
+- 每天最多收录 3 个与外贸、B2B 或跨境电商直接相关的工具或高价值资源。
+- 打开并核验官网或仓库，确认产品仍可访问、用途明确且不是纯广告落地页。
+- 与现有 URL 和产品名称去重；同一产品不因跟踪参数或不同入口重复收录。
+- 写入准确的中英文名称、简短说明、标签、`addedAt` 和 `sourceUrl`，放入最匹配的现有分类。
+- 不自动设置 `featured` 或联盟字段，不发布无法核实的价格、用户数和效果承诺。
+- 提交前必须运行 `npm run validate:data`，校验失败时不发布。
 
 ## 首页 Banner 推广
 

@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node server.mjs",
     "dev": "node server.mjs",
-    "seo": "node scripts/generate-sitemap.mjs"
+    "seo": "node scripts/generate-sitemap.mjs",
+    "validate:data": "node scripts/validate-sites.mjs"
   },
   "engines": {
     "node": ">=18"

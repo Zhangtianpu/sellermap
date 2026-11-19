@@ -10,6 +10,7 @@
       browse: "浏览全部",
       featured: "热门入口",
       popular: "热门",
+      newArrival: "新收录",
       results: (count) => `当前显示 ${count} 个网站`,
       itemCount: (count) => `${count} 个网站`,
       emptyTitle: "没有找到匹配的网站",
@@ -22,6 +23,7 @@
       browse: "Browse all",
       featured: "Popular picks",
       popular: "Popular",
+      newArrival: "New",
       results: (count) => `${count} websites shown`,
       itemCount: (count) => `${count} websites`,
       emptyTitle: "No matching websites",
@@ -174,9 +176,13 @@
     const linkRel = site.affiliate
       ? "sponsored noopener noreferrer"
       : "noopener noreferrer";
-    const badge = site.featured
-      ? `<span class="featured-badge">${copy.popular}</span>`
-      : "";
+    const addedAt = site.addedAt ? new Date(`${site.addedAt}T00:00:00Z`) : null;
+    const isNewArrival = addedAt && !Number.isNaN(addedAt.getTime())
+      && Date.now() - addedAt.getTime() <= 30 * 24 * 60 * 60 * 1000;
+    const badges = [
+      isNewArrival ? `<span class="site-badge new-badge">${copy.newArrival}</span>` : "",
+      site.featured ? `<span class="site-badge featured-badge">${copy.popular}</span>` : ""
+    ].filter(Boolean).join("");
 
     return `
       <a
@@ -188,7 +194,7 @@
         data-search="${escapeHtml(searchable)}"
         data-site-name="${escapeHtml(name)}"
       >
-        ${badge}
+        ${badges ? `<span class="site-badges">${badges}</span>` : ""}
         <span class="site-logo" aria-hidden="true">${escapeHtml(getInitials(name))}</span>
         <span class="site-main">
           <strong class="site-name">${escapeHtml(name)}</strong>

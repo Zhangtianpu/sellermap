@@ -890,18 +890,31 @@ html[data-theme="dark"] .theme-icon-moon {
   white-space: nowrap;
 }
 
-.featured-badge {
+.site-badges {
   position: absolute;
   top: 14px;
   right: 14px;
   z-index: 2;
+  display: flex;
+  gap: 5px;
+}
+
+.site-badge {
   padding: 3px 7px;
-  color: #cf5d00;
-  background: #fff4e8;
   border-radius: 7px;
   font-size: 9px;
   font-weight: 850;
   letter-spacing: 0.04em;
+}
+
+.featured-badge {
+  color: #cf5d00;
+  background: #fff4e8;
+}
+
+.new-badge {
+  color: #07663c;
+  background: #e7f8ef;
 }
 
 .empty-state {
@@ -1019,6 +1032,11 @@ html[data-theme="dark"] .site-logo {
 html[data-theme="dark"] .featured-badge {
   color: #ffc17a;
   background: #3b2a18;
+}
+
+html[data-theme="dark"] .new-badge {
+  color: #7ce3af;
+  background: #123326;
 }
 
 html[data-theme="dark"] .empty-icon {
