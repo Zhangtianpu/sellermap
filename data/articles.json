@@ -29,7 +29,7 @@
             "en": ["After entering Patagonia, the results page showed both company and supplier profiles, along with total shipments, latest shipment dates and related names. Checking the company type and address first helps avoid selecting a similarly named business."]
           },
           "screenshot": {
-            "src": "../../assets/images/articles/importyeti/search-results.png",
+            "src": "../../assets/images/articles/importyeti/search-results.jpg",
             "alt": { "zh": "ImportYeti 搜索 Patagonia 后的真实结果页面", "en": "Live ImportYeti search results for Patagonia" },
             "caption": { "zh": "真实操作截图：搜索结果包含企业类型、地址、总出货次数和最近出货时间。", "en": "Live test screenshot: results include company type, address, total shipments and latest shipment date." }
           }
@@ -41,7 +41,7 @@
             "en": ["The company profile shows the latest shipment, total sea shipments, average TEU and estimated shipping spend. The timeline can help identify seasonality, but estimates should be treated as research signals rather than official company figures."]
           },
           "screenshot": {
-            "src": "../../assets/images/articles/importyeti/company-overview.png",
+            "src": "../../assets/images/articles/importyeti/company-overview.jpg",
             "alt": { "zh": "ImportYeti 的 Patagonia 企业进口活动概览", "en": "Patagonia import overview in ImportYeti" },
             "caption": { "zh": "真实操作截图：企业详情页展示进口活动指标和时间趋势。", "en": "Live test screenshot: the company page shows import metrics and shipment trends." }
           }
@@ -53,7 +53,7 @@
             "en": ["The supplier table lists supplier names, countries, shipment counts, product descriptions and HS codes. Shipment frequency can indicate activity, while product descriptions and HS codes help narrow the list to factories relevant to a product category.", "These records only show relationships found in public bills of lading. They do not prove a current partnership or validate quality, compliance or delivery capability. Independent due diligence is still required before contacting or selecting a supplier."]
           },
           "screenshot": {
-            "src": "../../assets/images/articles/importyeti/suppliers.png",
+            "src": "../../assets/images/articles/importyeti/suppliers.jpg",
             "alt": { "zh": "ImportYeti 中 Patagonia 的供应商分析表", "en": "Patagonia supplier table in ImportYeti" },
             "caption": { "zh": "真实操作截图：供应商列表显示国家、出货次数、商品描述和 HS Code。", "en": "Live test screenshot: the supplier list shows countries, shipment counts, product descriptions and HS codes." }
           }
